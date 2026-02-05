@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c0rgxvak7qf6f"]
+
+[ext_resource type="Script" uid="uid://dy7lv8gwo0e3g" path="res://Scripts/Player.gd" id="1_kelma"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
+radius = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kelma"]
+size = Vector2(40, 40)
+
+[node name="Player" type="Node2D" unique_id=1812824144]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1874484111]
+script = ExtResource("1_kelma")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1022130891]
+
+[node name="ColorRect" type="ColorRect" parent="Player" unique_id=1307590103]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1751407248]
+shape = SubResource("CircleShape2D_y8w33")
+
+[node name="Area2D" type="Area2D" parent="Player" unique_id=1935631582]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=1166820741]
+shape = SubResource("RectangleShape2D_kelma")
+
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]

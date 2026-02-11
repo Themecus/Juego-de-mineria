@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://c0rgxvak7qf6f"]
 
 [ext_resource type="Script" uid="uid://dy7lv8gwo0e3g" path="res://Scripts/Player.gd" id="1_kelma"]
+[ext_resource type="Script" uid="uid://b1jki3stir1xu" path="res://Scripts/console.gd" id="2_y8w33"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kelma"]
-size = Vector2(40, 40)
+size = Vector2(68, 66)
 
 [node name="Player" type="Node2D" unique_id=1812824144]
 
@@ -14,6 +15,15 @@ size = Vector2(40, 40)
 script = ExtResource("1_kelma")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1022130891]
+
+[node name="console" type="Label" parent="Player/Camera2D" unique_id=369031030]
+offset_left = -576.0
+offset_top = -323.0
+offset_right = -397.0
+offset_bottom = -274.0
+text = "
+"
+script = ExtResource("2_y8w33")
 
 [node name="ColorRect" type="ColorRect" parent="Player" unique_id=1307590103]
 offset_left = -20.0

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bek1op7pyb75n"]
+
+[ext_resource type="Script" uid="uid://ngu2v5ue83rd" path="res://Scripts/ores.gd" id="1_ahqge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu8w2"]
+size = Vector2(40, 39)
+
+[node name="Iron" type="Node2D" unique_id=565720635]
+script = ExtResource("1_ahqge")
+
+[node name="Iron" type="Area2D" parent="." unique_id=263226170]
+position = Vector2(-20, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Iron" unique_id=647583728]
+position = Vector2(20, 19.5)
+shape = SubResource("RectangleShape2D_qu8w2")
+
+[node name="ColorRect" type="ColorRect" parent="Iron" unique_id=836691369]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0.45490196, 0.09411765, 1)
+metadata/_edit_use_anchors_ = true

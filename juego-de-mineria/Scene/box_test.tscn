@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://ujotjktk6nit"]
 
-[ext_resource type="Script" uid="uid://b8qekg5uk8c6" path="res://Scripts/box_test.gd" id="1_534rg"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5gx1"]
 size = Vector2(39, 38)
 
 [node name="Box test" type="Node2D" unique_id=944835129]
-script = ExtResource("1_534rg")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1291403261]
+[node name="Box testt" type="Area2D" parent="." unique_id=1291403261]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=524708234]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box testt" unique_id=524708234]
 shape = SubResource("RectangleShape2D_x5gx1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=39637814]
@@ -19,4 +16,4 @@ offset_top = -19.0
 offset_right = 20.0
 offset_bottom = 19.0
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Box testt" to="." method="_on_area_2d_body_entered"]

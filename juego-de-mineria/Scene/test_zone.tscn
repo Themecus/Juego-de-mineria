@@ -4,69 +4,30 @@
 [ext_resource type="PackedScene" uid="uid://bek1op7pyb75n" path="res://Scene/iron.tscn" id="2_kbl6y"]
 [ext_resource type="PackedScene" uid="uid://nyvteljwufu2" path="res://Scene/gold.tscn" id="3_ogxn6"]
 [ext_resource type="PackedScene" uid="uid://ckqfwxgy4eyro" path="res://Scene/gems.tscn" id="4_vupva"]
+[ext_resource type="PackedScene" uid="uid://c02xyl1lwb2rl" path="res://Scene/vault.tscn" id="5_ogxn6"]
 
 [node name="test zone" type="Node2D" unique_id=982874559]
 
 [node name="Player" parent="." unique_id=1874484111 instance=ExtResource("1_0ssdb")]
 position = Vector2(-318, 74)
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=212802380]
-offset_left = -241.0
-offset_top = 297.0
-offset_right = -158.0
-offset_bottom = 368.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=1408321621]
-offset_top = -189.0
-offset_right = 83.0
-offset_bottom = -118.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=426890068]
-offset_left = -617.0
-offset_top = -148.0
-offset_right = -534.0
-offset_bottom = -77.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=1381148410]
-offset_left = -547.0
-offset_top = 333.0
-offset_right = -464.0
-offset_bottom = 404.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="." unique_id=380391678]
-offset_left = 757.0
-offset_top = 119.0
-offset_right = 840.0
-offset_bottom = 190.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="." unique_id=11875972]
-offset_left = 283.0
-offset_top = -189.0
-offset_right = 366.0
-offset_bottom = -118.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="." unique_id=1922154005]
-offset_left = -291.0
-offset_top = -163.0
-offset_right = -208.0
-offset_bottom = -92.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="." unique_id=1290237881]
-offset_left = 173.0
-offset_top = 145.0
-offset_right = 256.0
-offset_bottom = 216.0
-color = Color(0.7572746, 0.6438919, 0.15482098, 1)
-
 [node name="Iron" parent="." unique_id=565720635 instance=ExtResource("2_kbl6y")]
-position = Vector2(-435, 93)
+position = Vector2(-415, 75)
+
+[node name="Iron5" parent="." unique_id=1491261582 instance=ExtResource("2_kbl6y")]
+position = Vector2(-215, 74)
+
+[node name="Iron6" parent="." unique_id=2102716275 instance=ExtResource("2_kbl6y")]
+position = Vector2(-318, 165)
+
+[node name="Iron7" parent="." unique_id=1504098256 instance=ExtResource("2_kbl6y")]
+position = Vector2(-274, -46)
+
+[node name="Iron8" parent="." unique_id=1221748016 instance=ExtResource("2_kbl6y")]
+position = Vector2(-375, -45)
+
+[node name="Iron9" parent="." unique_id=1811109443 instance=ExtResource("2_kbl6y")]
+position = Vector2(-435, -46)
 
 [node name="Iron2" parent="." unique_id=1258890073 instance=ExtResource("2_kbl6y")]
 position = Vector2(-588, 42)
@@ -100,3 +61,6 @@ position = Vector2(-395, 354)
 
 [node name="Gems3" parent="." unique_id=1856749290 instance=ExtResource("4_vupva")]
 position = Vector2(-435, 297)
+
+[node name="Vault" parent="." unique_id=786479074 instance=ExtResource("5_ogxn6")]
+position = Vector2(133, 73)

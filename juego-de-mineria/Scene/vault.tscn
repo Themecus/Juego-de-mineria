@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c02xyl1lwb2rl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku5cq"]
+size = Vector2(84, 76)
+
+[node name="Vault" type="Node2D" unique_id=786479074]
+
+[node name="Vault" type="Area2D" parent="." unique_id=157710911]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vault" unique_id=1113665913]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_ku5cq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=254809515]
+offset_left = -84.0
+offset_top = -76.0
+offset_right = 85.0
+offset_bottom = 76.0
+color = Color(0.45882353, 0, 1, 1)

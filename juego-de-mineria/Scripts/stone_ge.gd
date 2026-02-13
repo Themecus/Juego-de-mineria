@@ -1,0 +1,11 @@
+extends BreakBlocks  #heredas de tu clase base
+
+#No es nesecesario colocar todo, solo coloca las funciones heredadas que queramos modificar
+#por lo demas es como si ya estuvieran aqui
+func _ready():
+	durability=5
+
+
+func _process(delta):
+	if dig==true:
+		breaker(delta)

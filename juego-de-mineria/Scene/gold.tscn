@@ -2,21 +2,30 @@
 
 [ext_resource type="Script" uid="uid://ngu2v5ue83rd" path="res://Scripts/ores.gd" id="1_8p3ei"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu8w2"]
-size = Vector2(40, 39)
+[sub_resource type="CircleShape2D" id="CircleShape2D_8p3ei"]
+radius = 19.026299
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c21rf"]
+size = Vector2(68, 74)
 
 [node name="Gold" type="Node2D" unique_id=565720635]
 script = ExtResource("1_8p3ei")
 
-[node name="Gold" type="Area2D" parent="." unique_id=263226170]
+[node name="Gold2" type="RigidBody2D" parent="." unique_id=87575853]
+position = Vector2(20, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold2" unique_id=1786891122]
+shape = SubResource("CircleShape2D_8p3ei")
+
+[node name="Gold" type="Area2D" parent="Gold2" unique_id=1814157657]
 position = Vector2(-20, -19)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold" unique_id=647583728]
-position = Vector2(20, 19.5)
-shape = SubResource("RectangleShape2D_qu8w2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold2/Gold" unique_id=838775224]
+position = Vector2(20, 19)
+shape = SubResource("RectangleShape2D_c21rf")
 
-[node name="ColorRect" type="ColorRect" parent="Gold" unique_id=836691369]
+[node name="ColorRect" type="ColorRect" parent="Gold2/Gold" unique_id=250841215]
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(0.6117647, 0.36862746, 0.039215688, 1)
+color = Color(0.6298653, 0.6208813, 9.62615e-07, 1)
 metadata/_edit_use_anchors_ = true

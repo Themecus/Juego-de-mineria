@@ -4,9 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c8ravtuokm2u" path="res://Scene/floor.tscn" id="4_kbl6y"]
 [ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="4_ogxn6"]
 [ext_resource type="PackedScene" uid="uid://c02xyl1lwb2rl" path="res://Scene/vault.tscn" id="5_ogxn6"]
-[ext_resource type="PackedScene" uid="uid://ckcygb6noer5b" path="res://Scene/stoneG.tscn" id="5_vupva"]
-[ext_resource type="PackedScene" uid="uid://dt5ujd4v0d4ja" path="res://Scene/stoneI.tscn" id="6_vupva"]
-[ext_resource type="PackedScene" uid="uid://by1byoxd7bqje" path="res://Scene/stoneGe.tscn" id="7_k6k6t"]
 
 [node name="test zone" type="Node2D" unique_id=982874559]
 
@@ -22,15 +19,3 @@ scale = Vector2(11.203643, -0.42552656)
 
 [node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("4_ogxn6")]
 position = Vector2(-284, -42)
-
-[node name="StoneI" parent="." unique_id=384920675 instance=ExtResource("6_vupva")]
-position = Vector2(-470, -46)
-
-[node name="StoneGe" parent="." unique_id=1206551629 instance=ExtResource("7_k6k6t")]
-position = Vector2(-471, -185)
-
-[node name="StoneI2" parent="." unique_id=1622665586 instance=ExtResource("6_vupva")]
-position = Vector2(-620, 178)
-
-[node name="StoneG" parent="." unique_id=1293132955 instance=ExtResource("5_vupva")]
-position = Vector2(-270, -182)

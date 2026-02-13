@@ -2,21 +2,32 @@
 
 [ext_resource type="Script" uid="uid://ngu2v5ue83rd" path="res://Scripts/ores.gd" id="1_8s737"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu8w2"]
-size = Vector2(40, 39)
+[sub_resource type="CircleShape2D" id="CircleShape2D_8s737"]
+radius = 19.026299
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgrrj"]
+size = Vector2(68, 74)
 
 [node name="Gems" type="Node2D" unique_id=565720635]
 script = ExtResource("1_8s737")
 
-[node name="Gems" type="Area2D" parent="." unique_id=263226170]
+[node name="Gems2" type="RigidBody2D" parent="." unique_id=1742473889]
+position = Vector2(20, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gems2" unique_id=1147741645]
+position = Vector2(-20, -19)
+shape = SubResource("CircleShape2D_8s737")
+
+[node name="Gems" type="Area2D" parent="Gems2" unique_id=1345348406]
 position = Vector2(-20, -19)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gems" unique_id=647583728]
-position = Vector2(20, 19.5)
-shape = SubResource("RectangleShape2D_qu8w2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gems2/Gems" unique_id=1564484054]
+shape = SubResource("RectangleShape2D_tgrrj")
 
-[node name="ColorRect" type="ColorRect" parent="Gems" unique_id=836691369]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ColorRect" type="ColorRect" parent="Gems2/Gems" unique_id=836691369]
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
 color = Color(0.82868695, 0.0014951336, 0.94871885, 1)
 metadata/_edit_use_anchors_ = true

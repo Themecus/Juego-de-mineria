@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cgdikpyvawqkf"]
+
+[ext_resource type="Script" uid="uid://jdivhp67264u" path="res://Scripts/shovel.gd" id="1_v6xw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxdww"]
+
+[node name="Shovel" type="Node2D" unique_id=1461786888]
+
+[node name="Shovel" type="Area2D" parent="." unique_id=952406214]
+script = ExtResource("1_v6xw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shovel" unique_id=998392224]
+scale = Vector2(5, 1)
+shape = SubResource("RectangleShape2D_pxdww")
+
+[node name="ColorRect" type="ColorRect" parent="Shovel" unique_id=1450232523]
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 50.0
+offset_bottom = 10.0
+color = Color(0.5132329, 0.5132329, 0.5132329, 1)

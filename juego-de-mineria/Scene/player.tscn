@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0rgxvak7qf6f"]
 
 [ext_resource type="Script" uid="uid://dy7lv8gwo0e3g" path="res://Scripts/Player.gd" id="1_kelma"]
+[ext_resource type="PackedScene" uid="uid://cgdikpyvawqkf" path="res://Scene/shovel.tscn" id="2_xa75v"]
 [ext_resource type="Script" uid="uid://b1jki3stir1xu" path="res://Scripts/console.gd" id="2_y8w33"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
@@ -13,6 +14,8 @@ size = Vector2(68, 66)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1874484111]
 script = ExtResource("1_kelma")
+
+[node name="Shovel" parent="Player" unique_id=1461786888 instance=ExtResource("2_xa75v")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1022130891]
 
@@ -42,3 +45,4 @@ shape = SubResource("RectangleShape2D_kelma")
 
 [connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]

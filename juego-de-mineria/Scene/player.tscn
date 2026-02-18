@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://dy7lv8gwo0e3g" path="res://Scripts/Player.gd" id="1_kelma"]
 [ext_resource type="PackedScene" uid="uid://cgdikpyvawqkf" path="res://Scene/shovel.tscn" id="2_xa75v"]
 [ext_resource type="Script" uid="uid://b1jki3stir1xu" path="res://Scripts/console.gd" id="2_y8w33"]
+[ext_resource type="Script" uid="uid://1quje131xnvy" path="res://Scripts/bag.gd" id="4_58ae2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kelma"]
-size = Vector2(68, 66)
+size = Vector2(68, 138)
 
 [node name="Player" type="Node2D" unique_id=1812824144]
 
@@ -38,11 +39,13 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1751407248]
 shape = SubResource("CircleShape2D_y8w33")
 
-[node name="Area2D" type="Area2D" parent="Player" unique_id=1935631582]
+[node name="Bag" type="Area2D" parent="Player" unique_id=1935631582]
+script = ExtResource("4_58ae2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=1166820741]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Bag" unique_id=1166820741]
 shape = SubResource("RectangleShape2D_kelma")
 
-[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]
-[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Player/Bag" to="Player" method="_on_bag_area_entered"]
+[connection signal="area_exited" from="Player/Bag" to="Player" method="_on_bag_area_exited"]
+[connection signal="body_entered" from="Player/Bag" to="Player" method="_on_bag_body_entered"]
+[connection signal="body_exited" from="Player/Bag" to="Player" method="_on_bag_body_exited"]

@@ -31,7 +31,8 @@ func action(delta):
 		console.dataVisible()
 
 func touch(delta):
-	if Input.is_action_just_pressed("Touch") and inventory.total < limitOres:
+	if Input.is_action_pressed("Sack") and inventory.total < limitOres:
+		
 		# esto sera un acumulador de los diferentes minerales que encontremos
 		# Agarrandolos de un golpe y poder guardar muchos a la vez
 		var resources = {
@@ -42,14 +43,17 @@ func touch(delta):
 		var oreDelete = []
 		
 		# Recolectar todas las areas
-		for area in $Area2D.get_overlapping_areas():
+		for area in $Bag.get_overlapping_areas():
+			
 			#Tener al dia el peso para ver si podemos proceder
 			if inventory.total>= limitOres:
 				break
 			
 			# Verificar por nombre exacto de las areas
 			var ore_name = area.name
+			
 			if ore_name == "Gold" or ore_name == "Iron" or ore_name == "Gems" or ore_name == "Gold2" or ore_name == "Iron2" or ore_name == "Gems2":
+				
 				#si ves un dos quiere decir que se refiere al body y no area
 				var mineral = area.get_parent()
 				if is_instance_valid(mineral) and mineral.has_method("revenue"):
@@ -65,7 +69,8 @@ func touch(delta):
 					resources[tipo_base] += mineral.revenue()
 					oreDelete.append(mineral)
 		# Recolectar todos los cuerpos
-		for body in $Area2D.get_overlapping_bodies():
+
+		for body in $Bag.get_overlapping_bodies():
 			#Tener al dia el peso para ver si podemos proceder
 			if inventory.total>= limitOres:
 				break
@@ -99,7 +104,7 @@ func touch(delta):
 				if is_instance_valid(mineral):
 					mineral.take()
 			#Actualizar contador de minerales cerca
-			oresCloset = $Area2D.get_overlapping_areas().size() + $Area2D.get_overlapping_bodies().size()
+			oresCloset = $Bag.get_overlapping_areas().size() + $Bag.get_overlapping_bodies().size()
 
 
 func moving(delta):
@@ -108,7 +113,8 @@ func moving(delta):
 	move_and_slide()#motor de movimiento
 
 
-func _on_area_2d_area_entered(area):#colocar en un grupo de cosas que solo se pueden iteractuar
+func _on_bag_area_entered(area: Area2D) -> void:#colocar en un grupo de cosas que solo se pueden iteractuar
+
 	if area.name=="Gold" or area.name=="Iron" or area.name=="Gems" or area.name=="Gold2" or area.name=="Iron2" or area.name=="Gems2":#ten siempre en cuenta los nombres de cada nodo para llamarlos
 		nameOre=area.name
 		oresCloset += 1
@@ -122,14 +128,15 @@ func _on_area_2d_area_entered(area):#colocar en un grupo de cosas que solo se pu
 		inventory.iron = 0
 		inventory.gems = 0
 
-func _on_area_2d_area_exited(area):
+
+func _on_bag_area_exited(area: Area2D) -> void:
 	if area.name=="Gold" or area.name=="Iron" or area.name=="Gems" or area.name=="Gold2" or area.name=="Iron2" or area.name=="Gems2":
 		oresCloset -= 1
 		if oresCloset <= 0:
 			oresCloset = 0
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_bag_body_entered(body: Node2D) -> void:
 	if body.name=="Gold" or body.name=="Iron" or body.name=="Gems" or body.name=="Gold2" or body.name=="Iron2" or body.name=="Gems2":#ten siempre en cuenta los nombres de cada nodo para llamarlos
 		nameOre=body.name
 		oresCloset += 1
@@ -143,7 +150,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		inventory.iron = 0
 		inventory.gems = 0
 
-func _on_area_2d_body_exited(body):
+
+func _on_bag_body_exited(body: Node2D) -> void:
 	if body.name=="Gold" or body.name=="Iron" or body.name=="Gems" or body.name=="Gold2" or body.name=="Iron2" or body.name=="Gems2":
 		oresCloset -= 1
 		if oresCloset <= 0:

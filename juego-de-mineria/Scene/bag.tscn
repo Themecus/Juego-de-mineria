@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bgig465kd3gg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlfc2"]
+
+[node name="Bag" type="Node2D" unique_id=1314187330]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=201714226]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1783906400]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_hlfc2")
+
+[node name="ColorRect" type="ColorRect" parent="Area2D" unique_id=53380284]
+offset_left = -40.0
+offset_top = -41.0
+offset_right = 42.0
+offset_bottom = 42.0
+color = Color(0.16862746, 0.20392157, 0.18431373, 1)

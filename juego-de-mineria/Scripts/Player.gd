@@ -64,7 +64,6 @@ func touch(delta):
 					
 					resources[tipo_base] += mineral.revenue()
 					oreDelete.append(mineral)
-		
 		# Recolectar todos los cuerpos
 		for body in $Area2D.get_overlapping_bodies():
 			#Tener al dia el peso para ver si podemos proceder

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bek1op7pyb75n"]
 
-[ext_resource type="Script" uid="uid://ngu2v5ue83rd" path="res://Scripts/ores.gd" id="1_ahqge"]
+[ext_resource type="Script" uid="uid://bd58utkwnpmm5" path="res://Scripts/oreI.gd" id="1_ahqge"]
+[ext_resource type="Script" uid="uid://c4ucst4e4y64q" path="res://Scripts/unlockI.gd" id="2_rwm2t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahqge"]
 radius = 19.026299
@@ -13,6 +14,7 @@ script = ExtResource("1_ahqge")
 
 [node name="Iron2" type="RigidBody2D" parent="." unique_id=533896083]
 position = Vector2(20, 19)
+script = ExtResource("2_rwm2t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Iron2" unique_id=737679773]
 shape = SubResource("CircleShape2D_ahqge")

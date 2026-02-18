@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nyvteljwufu2"]
 
-[ext_resource type="Script" uid="uid://ngu2v5ue83rd" path="res://Scripts/ores.gd" id="1_8p3ei"]
+[ext_resource type="Script" uid="uid://bb50pyfjoj2t7" path="res://Scripts/oreG.gd" id="1_c21rf"]
+[ext_resource type="Script" uid="uid://ncwafasbpa1t" path="res://Scripts/unlockG.gd" id="2_c21rf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8p3ei"]
 radius = 19.026299
@@ -9,10 +10,11 @@ radius = 19.026299
 size = Vector2(68, 74)
 
 [node name="Gold" type="Node2D" unique_id=565720635]
-script = ExtResource("1_8p3ei")
+script = ExtResource("1_c21rf")
 
 [node name="Gold2" type="RigidBody2D" parent="." unique_id=87575853]
 position = Vector2(20, 19)
+script = ExtResource("2_c21rf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gold2" unique_id=1786891122]
 shape = SubResource("CircleShape2D_8p3ei")
@@ -29,3 +31,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.6298653, 0.6208813, 9.62615e-07, 1)
 metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="Gold2/Gold" to="Gold2" method="_on_gold_area_entered"]
+[connection signal="area_exited" from="Gold2/Gold" to="Gold2" method="_on_gold_area_exited"]

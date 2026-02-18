@@ -22,7 +22,7 @@ offset_right = 51.0
 offset_bottom = 52.0
 color = Color(0, 0, 0, 1)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1778820499]
+[node name="Area2D" type="Area2D" parent="." unique_id=1778820499 groups=["floor"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1872874260]
 scale = Vector2(4, 4)

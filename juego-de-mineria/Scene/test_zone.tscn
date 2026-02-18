@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://ckcygb6noer5b" path="res://Scene/stoneG.tscn" id="5_vupva"]
 [ext_resource type="PackedScene" uid="uid://dt5ujd4v0d4ja" path="res://Scene/stoneI.tscn" id="6_vupva"]
 [ext_resource type="PackedScene" uid="uid://by1byoxd7bqje" path="res://Scene/stoneGe.tscn" id="7_k6k6t"]
+[ext_resource type="PackedScene" uid="uid://nyvteljwufu2" path="res://Scene/gold.tscn" id="8_dft1r"]
+[ext_resource type="PackedScene" uid="uid://ckqfwxgy4eyro" path="res://Scene/gems.tscn" id="9_r7m10"]
+[ext_resource type="PackedScene" uid="uid://bek1op7pyb75n" path="res://Scene/iron.tscn" id="10_qvdh3"]
 
 [node name="test zone" type="Node2D" unique_id=982874559]
 
@@ -14,14 +17,14 @@
 position = Vector2(-17, -97)
 
 [node name="Vault" parent="." unique_id=786479074 instance=ExtResource("5_ogxn6")]
-position = Vector2(319, 0)
+position = Vector2(797, -97)
 
 [node name="floor" parent="." unique_id=456840406 instance=ExtResource("4_kbl6y")]
 position = Vector2(-353, 277)
 scale = Vector2(11.203643, -0.42552656)
 
 [node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("4_ogxn6")]
-position = Vector2(-284, -42)
+position = Vector2(254, 0)
 
 [node name="StoneI" parent="." unique_id=384920675 instance=ExtResource("6_vupva")]
 position = Vector2(-470, -46)
@@ -34,3 +37,18 @@ position = Vector2(-620, 178)
 
 [node name="StoneG" parent="." unique_id=1293132955 instance=ExtResource("5_vupva")]
 position = Vector2(-270, -182)
+
+[node name="Gold" parent="." unique_id=565720635 instance=ExtResource("8_dft1r")]
+position = Vector2(255, -400)
+
+[node name="Stone2" parent="." unique_id=150805686 instance=ExtResource("4_ogxn6")]
+position = Vector2(277, -266)
+
+[node name="Stone3" parent="." unique_id=2106821284 instance=ExtResource("4_ogxn6")]
+position = Vector2(-7, -349)
+
+[node name="Gems" parent="." unique_id=758999548 instance=ExtResource("9_r7m10")]
+position = Vector2(13, -476)
+
+[node name="Iron" parent="." unique_id=406422622 instance=ExtResource("10_qvdh3")]
+position = Vector2(214, -133)

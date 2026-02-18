@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp5ev"]
 size = Vector2(182, 176)
 
-[node name="floor" type="Node2D" unique_id=456840406]
+[node name="floor" type="Node2D" unique_id=456840406 groups=["floor"]]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1507833451]
 

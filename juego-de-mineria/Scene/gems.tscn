@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ckqfwxgy4eyro"]
 
-[ext_resource type="Script" uid="uid://ngu2v5ue83rd" path="res://Scripts/ores.gd" id="1_8s737"]
+[ext_resource type="Script" uid="uid://d03tsywu6scgo" path="res://Scripts/oreGe.gd" id="1_8s737"]
+[ext_resource type="Script" uid="uid://blax8a8rc7g1b" path="res://Scripts/unlockGe.gd" id="2_tgrrj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8s737"]
 radius = 19.026299
@@ -13,6 +14,7 @@ script = ExtResource("1_8s737")
 
 [node name="Gems2" type="RigidBody2D" parent="." unique_id=1742473889]
 position = Vector2(20, 19)
+script = ExtResource("2_tgrrj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gems2" unique_id=1147741645]
 position = Vector2(-20, -19)

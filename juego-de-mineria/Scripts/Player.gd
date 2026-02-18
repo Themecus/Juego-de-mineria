@@ -41,7 +41,7 @@ func touch(delta):
 			"Gems": 0
 		}
 		var oreDelete = []
-		
+
 		# Recolectar todas las areas
 		for area in $Bag.get_overlapping_areas():
 			
@@ -116,6 +116,7 @@ func moving(delta):
 func _on_bag_area_entered(area: Area2D) -> void:#colocar en un grupo de cosas que solo se pueden iteractuar
 
 	if area.name=="Gold" or area.name=="Iron" or area.name=="Gems" or area.name=="Gold2" or area.name=="Iron2" or area.name=="Gems2":#ten siempre en cuenta los nombres de cada nodo para llamarlos
+		
 		nameOre=area.name
 		oresCloset += 1
 		#collectable = area.get_parent()#2)usar alguna referencia como area y meter el get parent para conseguir el nodo principial donde esta el script
@@ -138,6 +139,7 @@ func _on_bag_area_exited(area: Area2D) -> void:
 
 func _on_bag_body_entered(body: Node2D) -> void:
 	if body.name=="Gold" or body.name=="Iron" or body.name=="Gems" or body.name=="Gold2" or body.name=="Iron2" or body.name=="Gems2":#ten siempre en cuenta los nombres de cada nodo para llamarlos
+
 		nameOre=body.name
 		oresCloset += 1
 		#collectable = body.get_parent()#2)usar alguna referencia como area y meter el get parent para conseguir el nodo principial donde esta el script

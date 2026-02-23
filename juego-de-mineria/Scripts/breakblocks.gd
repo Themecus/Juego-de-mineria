@@ -5,7 +5,7 @@ var dig = false
 var durability=5
 var delta
 var ore=preload("res://Scene/iron.tscn") 
-var ore_instance
+var oreInstance
 var capacity=0
 
 func breaker(delta):
@@ -16,9 +16,9 @@ func breaker(delta):
 		while capacity<numberOfOres:
 			var variation=Vector2(randf_range(-50,50),randf_range(-50,50))#esto actuara para que varie la ubicacion
 			#de dropeo de mineraels
-			ore_instance=ore.instantiate()
-			ore_instance.position=position+variation
-			get_parent().add_child(ore_instance)#agregamos el get parents ya que cuando sea eliminado el no lo sea, 
+			oreInstance=ore.instantiate()
+			oreInstance.position=position+variation
+			get_parent().add_child(oreInstance)#agregamos el get parents ya que cuando sea eliminado el no lo sea, 
 			#en otro caso que no sea sde elimnacion quitalo y dejalo como addchildd
 			capacity+=1
 		queue_free()

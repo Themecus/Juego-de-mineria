@@ -14,6 +14,7 @@ script = ExtResource("1_c21rf")
 
 [node name="Gold2" type="RigidBody2D" parent="." unique_id=87575853]
 position = Vector2(20, 19)
+mass = 0.3
 script = ExtResource("2_c21rf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gold2" unique_id=1786891122]

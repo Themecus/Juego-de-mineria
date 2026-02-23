@@ -1,27 +1,19 @@
 [gd_scene format=3 uid="uid://xtc6sj371i1"]
 
 [ext_resource type="PackedScene" uid="uid://c0rgxvak7qf6f" path="res://Scene/player.tscn" id="1_0ssdb"]
-[ext_resource type="PackedScene" uid="uid://c8ravtuokm2u" path="res://Scene/floor.tscn" id="4_kbl6y"]
 [ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="4_ogxn6"]
-[ext_resource type="PackedScene" uid="uid://c02xyl1lwb2rl" path="res://Scene/vault.tscn" id="5_ogxn6"]
 [ext_resource type="PackedScene" uid="uid://ckcygb6noer5b" path="res://Scene/stoneG.tscn" id="5_vupva"]
 [ext_resource type="PackedScene" uid="uid://dt5ujd4v0d4ja" path="res://Scene/stoneI.tscn" id="6_vupva"]
 [ext_resource type="PackedScene" uid="uid://by1byoxd7bqje" path="res://Scene/stoneGe.tscn" id="7_k6k6t"]
 [ext_resource type="PackedScene" uid="uid://nyvteljwufu2" path="res://Scene/gold.tscn" id="8_dft1r"]
-[ext_resource type="PackedScene" uid="uid://ckqfwxgy4eyro" path="res://Scene/gems.tscn" id="9_r7m10"]
-[ext_resource type="PackedScene" uid="uid://bek1op7pyb75n" path="res://Scene/iron.tscn" id="10_qvdh3"]
+[ext_resource type="PackedScene" uid="uid://q2qqtlq538qd" path="res://Scene/road.tscn" id="8_s3dcp"]
+[ext_resource type="PackedScene" uid="uid://basxibhk2yulf" path="res://Scene/car.tscn" id="9_s3dcp"]
 
 [node name="test zone" type="Node2D" unique_id=982874559]
 
 [node name="Player" parent="." unique_id=1874484111 instance=ExtResource("1_0ssdb")]
-position = Vector2(-17, -97)
-
-[node name="Vault" parent="." unique_id=786479074 instance=ExtResource("5_ogxn6")]
-position = Vector2(797, -97)
-
-[node name="floor" parent="." unique_id=456840406 instance=ExtResource("4_kbl6y")]
-position = Vector2(-353, 277)
-scale = Vector2(11.203643, -0.42552656)
+position = Vector2(762, 47)
+scale = Vector2(1.017433, 1)
 
 [node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("4_ogxn6")]
 position = Vector2(-308, -400)
@@ -36,25 +28,19 @@ position = Vector2(-471, -185)
 position = Vector2(-620, 178)
 
 [node name="StoneG" parent="." unique_id=1293132955 instance=ExtResource("5_vupva")]
-position = Vector2(-620, -185)
+position = Vector2(3, -523)
 
-[node name="Gold" parent="." unique_id=565720635 instance=ExtResource("8_dft1r")]
-position = Vector2(255, -400)
+[node name="StoneG2" parent="." unique_id=757984609 instance=ExtResource("5_vupva")]
+position = Vector2(125, -523)
 
-[node name="Gold2" parent="." unique_id=35787774 instance=ExtResource("8_dft1r")]
-position = Vector2(255, -400)
+[node name="StoneG3" parent="." unique_id=781074552 instance=ExtResource("5_vupva")]
+position = Vector2(255, -523)
 
-[node name="Gold3" parent="." unique_id=335033724 instance=ExtResource("8_dft1r")]
-position = Vector2(255, -400)
+[node name="StoneG4" parent="." unique_id=1925604438 instance=ExtResource("5_vupva")]
+position = Vector2(411, -523)
 
-[node name="Gold4" parent="." unique_id=1827979368 instance=ExtResource("8_dft1r")]
-position = Vector2(255, -400)
-
-[node name="Gold5" parent="." unique_id=1391236275 instance=ExtResource("8_dft1r")]
-position = Vector2(255, -400)
-
-[node name="Gold6" parent="." unique_id=1655959977 instance=ExtResource("8_dft1r")]
-position = Vector2(255, -400)
+[node name="StoneG5" parent="." unique_id=189722323 instance=ExtResource("5_vupva")]
+position = Vector2(550, -523)
 
 [node name="Stone2" parent="." unique_id=150805686 instance=ExtResource("4_ogxn6")]
 position = Vector2(-414, -297)
@@ -62,53 +48,11 @@ position = Vector2(-414, -297)
 [node name="Stone3" parent="." unique_id=2106821284 instance=ExtResource("4_ogxn6")]
 position = Vector2(-670, -349)
 
-[node name="Gems" parent="." unique_id=758999548 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
+[node name="Gold" parent="." unique_id=565720635 instance=ExtResource("8_dft1r")]
+position = Vector2(-907, -195.99998)
 
-[node name="Gems2" parent="." unique_id=1271102266 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
+[node name="Car" parent="." unique_id=1749743340 instance=ExtResource("9_s3dcp")]
+position = Vector2(850, 230)
 
-[node name="Gems3" parent="." unique_id=418794269 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems4" parent="." unique_id=871989624 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems5" parent="." unique_id=131068036 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems6" parent="." unique_id=929923788 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems7" parent="." unique_id=1344466685 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems8" parent="." unique_id=668190409 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems9" parent="." unique_id=1838532544 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems10" parent="." unique_id=2008706544 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Gems11" parent="." unique_id=1127780990 instance=ExtResource("9_r7m10")]
-position = Vector2(13, -476)
-
-[node name="Iron" parent="." unique_id=406422622 instance=ExtResource("10_qvdh3")]
-position = Vector2(214, -133)
-
-[node name="Iron2" parent="." unique_id=341065954 instance=ExtResource("10_qvdh3")]
-position = Vector2(214, -133)
-
-[node name="Iron3" parent="." unique_id=1465727410 instance=ExtResource("10_qvdh3")]
-position = Vector2(214, -133)
-
-[node name="Iron4" parent="." unique_id=1427811237 instance=ExtResource("10_qvdh3")]
-position = Vector2(214, -133)
-
-[node name="Iron5" parent="." unique_id=559076727 instance=ExtResource("10_qvdh3")]
-position = Vector2(214, -133)
-
-[node name="Iron6" parent="." unique_id=1586339167 instance=ExtResource("10_qvdh3")]
-position = Vector2(214, -133)
+[node name="Road" parent="." unique_id=1656459966 instance=ExtResource("8_s3dcp")]
+position = Vector2(50, 271)

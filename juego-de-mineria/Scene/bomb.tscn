@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dyurxr07owgpi"]
+
+[ext_resource type="Script" uid="uid://w42uy3kiu03k" path="res://Scripts/bomb.gd" id="1_fvttr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdcs4"]
+radius = 28.01785
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fvttr"]
+radius = 193.0
+
+[node name="Bomb" type="Node2D" unique_id=1779378503]
+script = ExtResource("1_fvttr")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=872665908]
+mass = 0.042
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 50
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1784259635]
+shape = SubResource("CircleShape2D_wdcs4")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D" unique_id=400855411]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.22352941, 0.3764706, 0.54509807, 1)
+
+[node name="explosionZone" type="Area2D" parent="RigidBody2D" unique_id=1609207071]
+collision_layer = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/explosionZone" unique_id=662448811]
+shape = SubResource("CircleShape2D_fvttr")
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]
+[connection signal="area_entered" from="RigidBody2D/explosionZone" to="." method="_on_explosion_zone_area_entered"]

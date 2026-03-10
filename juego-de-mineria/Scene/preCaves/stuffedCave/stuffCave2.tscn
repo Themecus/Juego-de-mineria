@@ -1,0 +1,29 @@
+[gd_scene format=4 uid="uid://dx0gwnnkw3a11"]
+
+[ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="1_njxwo"]
+[ext_resource type="PackedScene" uid="uid://duqq3vmmgvqvh" path="res://Scene/stoneUnbreakable.tscn" id="2_gmf32"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xijsg"]
+scenes/1/scene = ExtResource("1_njxwo")
+scenes/3/scene = ExtResource("2_gmf32")
+
+[sub_resource type="TileSet" id="TileSet_rvkqf"]
+sources/0 = SubResource("TileSetScenesCollectionSource_xijsg")
+
+[node name="StuffCave2" type="Node2D" unique_id=494965830]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2059184580]
+tile_map_data = PackedByteArray("AAD7//z/AAAAAAAAAwADAPz/AAAAAAAAAwADAAQAAAAAAAAAAwADAAwAAAAAAAAAAwALAAwAAAAAAAAAAwALAAQAAAAAAAAAAwALAPz/AAAAAAAAAwDz//z/AAAAAAAAAwDz/wQAAAAAAAAAAwD7/wwAAAAAAAAAAwD7/wQAAAAAAAAAAwDz/wwAAAAAAAAAAwDz/xQAAAAAAAAAAwD7/xQAAAAAAAAAAwADABQAAAAAAAAAAwALABQAAAAAAAAAAwA=")
+tile_set = SubResource("TileSet_rvkqf")
+
+[node name="up" type="Marker2D" parent="." unique_id=919554705]
+position = Vector2(0, -120)
+
+[node name="down" type="Marker2D" parent="." unique_id=545861615]
+position = Vector2(0, 392)
+
+[node name="right" type="Marker2D" parent="." unique_id=651923028]
+position = Vector2(248, 136)
+
+[node name="left" type="Marker2D" parent="." unique_id=790748428]
+position = Vector2(-264, 136)

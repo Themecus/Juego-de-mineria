@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgdikpyvawqkf" path="res://Scene/shovel.tscn" id="2_xa75v"]
 [ext_resource type="Script" uid="uid://b1jki3stir1xu" path="res://Scripts/console.gd" id="2_y8w33"]
 [ext_resource type="PackedScene" uid="uid://bgig465kd3gg2" path="res://Scene/bag.tscn" id="4_58ae2"]
+[ext_resource type="PackedScene" uid="uid://bb52h8o6letsx" path="res://Scene/menuPersonal.tscn" id="5_ivevv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
 radius = 20.0
@@ -13,15 +14,25 @@ radius = 20.0
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1874484111]
 script = ExtResource("1_kelma")
 
+[node name="MenuPersonal" parent="Player" unique_id=1782962435 instance=ExtResource("5_ivevv")]
+visible = false
+offset_left = -575.0
+offset_top = -324.0
+offset_right = -575.0
+offset_bottom = -324.0
+
+[node name="bombDeployer" type="Marker2D" parent="Player" unique_id=537576548]
+position = Vector2(0, 55)
+
 [node name="Shovel" parent="Player" unique_id=1461786888 instance=ExtResource("2_xa75v")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1022130891]
 
 [node name="console" type="Label" parent="Player/Camera2D" unique_id=369031030]
-offset_left = -576.0
-offset_top = -323.0
-offset_right = -397.0
-offset_bottom = -274.0
+offset_left = -575.0
+offset_top = -324.0
+offset_right = -396.0
+offset_bottom = -275.0
 text = "
 "
 script = ExtResource("2_y8w33")

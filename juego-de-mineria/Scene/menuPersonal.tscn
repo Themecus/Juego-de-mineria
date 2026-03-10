@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bb52h8o6letsx"]
+
+[ext_resource type="Script" uid="uid://cq386leppl22o" path="res://Scripts/menu_personal.gd" id="1_uv3n4"]
+
+[node name="MenuPersonal" type="Control" unique_id=1782962435]
+z_index = 128
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uv3n4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1861335744]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.3888376, 0.7977293, 0.7977293, 0.39607844)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1745287689]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 845.0
+offset_top = 307.0
+offset_right = 286.0
+offset_bottom = 307.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=2048576325]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "REANUDAR"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1922771435]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "CONFIGURAR
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=500942268]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "SALIR AL MENU
+"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]

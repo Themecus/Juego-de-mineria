@@ -7,26 +7,49 @@ var interaction_zone=false
 var inventory#el inventario personal del usuario, limitado
 var vault#el inventario donde guardaremos los minerales, ilimitado
 @onready var console=$Camera2D/console
+@onready var menu=$MenuPersonal
 var points=0
 var nameOre=""
 var limitOres=10
 var oresCloset=0
-
+var itemBomb = preload("res://Scene/bomb.tscn")
 
 func _ready():
 	var inventoryClass = load("res://Scripts/inventory.gd")#con esto podemos llamar scripts que no tengan nodos asociados
 	inventory = inventoryClass.new()  # Crear NUEVA instancia
 	vault = inventoryClass.new()  
+	menu.visible=false
 
 func _process(delta):
+	pauseMenu()
 	console.updateData(inventory)#la info de actualiza constantemente en console
 	console.updateDataVault(vault)#la info de actualiza constantemente en console
 	action(delta)#aqui iran todas las acciones de nuestro pj
-
+	
+	
 
 func action(delta):
 	moving(delta)#esta sera de movimiento
 	touch(delta)#aqui donde interaccione
+	activeConsole()
+	
+	#useItem()#Aqui activaremos el item en uso, como bombas o cosas de apoyo
+	#este ultimo queda desabilitado hasta nuevo aviso, tenemos que ver como equipar diferentes items
+
+func pauseMenu():#con esto haremos aparecer el menu y detener el juego
+	if Input.is_action_just_pressed("Menu"):
+		menu.visible=!menu.visible
+		get_tree().paused = !get_tree().paused
+		menu.process_mode = PROCESS_MODE_ALWAYS
+
+func useItem():
+	if Input.is_action_just_pressed("Item"):
+		var bomb = itemBomb.instantiate()
+		get_parent().add_child(bomb)#hazlo para que tenga sus propias propiedades y no herede nada de nosotros
+		bomb.global_position = $bombDeployer.global_position
+
+
+func activeConsole():
 	if Input.is_action_just_pressed("console"):
 		console.dataVisible()
 

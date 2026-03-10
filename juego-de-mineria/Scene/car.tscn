@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bb3rigodtb25" path="res://Scripts/car.gd" id="1_cd047"]
 [ext_resource type="PackedScene" uid="uid://c02xyl1lwb2rl" path="res://Scene/vault.tscn" id="2_d7vpe"]
+[ext_resource type="PackedScene" uid="uid://bb52h8o6letsx" path="res://Scene/menuPersonal.tscn" id="2_uukhu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7vpe"]
 size = Vector2(161.5, 29)
@@ -10,6 +11,13 @@ size = Vector2(161.5, 29)
 
 [node name="Car" type="CharacterBody2D" parent="." unique_id=1608034208]
 script = ExtResource("1_cd047")
+
+[node name="MenuPersonal" parent="Car" unique_id=1782962435 instance=ExtResource("2_uukhu")]
+visible = false
+offset_left = -429.0
+offset_top = -306.0
+offset_right = -429.0
+offset_bottom = -306.0
 
 [node name="Vault" parent="Car" unique_id=786479074 instance=ExtResource("2_d7vpe")]
 position = Vector2(146, -75)
@@ -27,7 +35,6 @@ shape = SubResource("RectangleShape2D_d7vpe")
 
 [node name="Camera2D" type="Camera2D" parent="Car" unique_id=1166528321]
 position = Vector2(150, 20)
-zoom = Vector2(0.1, 0.1)
 
 [node name="Marker2D" type="Marker2D" parent="Car" unique_id=1021659703]
 position = Vector2(151, -75)

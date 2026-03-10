@@ -9,113 +9,107 @@ size = Vector2(29, 277)
 [node name="Road" type="Node2D" unique_id=1656459966 groups=["floor"]]
 script = ExtResource("1_eocbo")
 
-[node name="StoneUnbreakable" parent="." unique_id=1794573011 instance=ExtResource("1_res4m")]
-position = Vector2(-51, 48)
-
-[node name="StoneUnbreakable2" parent="." unique_id=102889457 instance=ExtResource("1_res4m")]
-position = Vector2(48, 48)
-
-[node name="StoneUnbreakable3" parent="." unique_id=1610403082 instance=ExtResource("1_res4m")]
-position = Vector2(149, 48)
-
-[node name="StoneUnbreakable4" parent="." unique_id=375959933 instance=ExtResource("1_res4m")]
-position = Vector2(248, 48)
-
-[node name="StoneUnbreakable5" parent="." unique_id=1389083191 instance=ExtResource("1_res4m")]
-position = Vector2(349, 48)
-
-[node name="StoneUnbreakable6" parent="." unique_id=885809248 instance=ExtResource("1_res4m")]
-position = Vector2(450, 48)
-
-[node name="StoneUnbreakable7" parent="." unique_id=2088182527 instance=ExtResource("1_res4m")]
-position = Vector2(549, 48)
-
-[node name="StoneUnbreakable8" parent="." unique_id=1408477009 instance=ExtResource("1_res4m")]
-position = Vector2(650, 48)
-
-[node name="StoneUnbreakable9" parent="." unique_id=1213701557 instance=ExtResource("1_res4m")]
-position = Vector2(751, 48)
-
-[node name="StoneUnbreakable10" parent="." unique_id=470163499 instance=ExtResource("1_res4m")]
-position = Vector2(850, 48)
-
-[node name="StoneUnbreakable11" parent="." unique_id=285707172 instance=ExtResource("1_res4m")]
-position = Vector2(951, 48)
-
-[node name="StoneUnbreakable12" parent="." unique_id=785961146 instance=ExtResource("1_res4m")]
-position = Vector2(1052, 48)
-
-[node name="StoneUnbreakable13" parent="." unique_id=1799593865 instance=ExtResource("1_res4m")]
-position = Vector2(1151, 48)
-
-[node name="StoneUnbreakable14" parent="." unique_id=225705730 instance=ExtResource("1_res4m")]
-position = Vector2(1252, 48)
-
-[node name="StoneUnbreakable15" parent="." unique_id=611277470 instance=ExtResource("1_res4m")]
-position = Vector2(1353, 48)
-
-[node name="StoneUnbreakable16" parent="." unique_id=1972205982 instance=ExtResource("1_res4m")]
-position = Vector2(1452, 48)
-
 [node name="spawningZoneRoadR" type="Marker2D" parent="." unique_id=1847309403]
-position = Vector2(1553, 48)
+position = Vector2(1856, 64)
 
 [node name="spawningZoneRoadL" type="Marker2D" parent="." unique_id=954885653]
-position = Vector2(-1552, 48)
-
-[node name="StoneUnbreakable17" parent="." unique_id=238318802 instance=ExtResource("1_res4m")]
-position = Vector2(-1455, 48)
-
-[node name="StoneUnbreakable18" parent="." unique_id=364525405 instance=ExtResource("1_res4m")]
-position = Vector2(-1356, 48)
-
-[node name="StoneUnbreakable19" parent="." unique_id=1632525850 instance=ExtResource("1_res4m")]
-position = Vector2(-1255, 48)
-
-[node name="StoneUnbreakable20" parent="." unique_id=909326210 instance=ExtResource("1_res4m")]
-position = Vector2(-1154, 48)
-
-[node name="StoneUnbreakable21" parent="." unique_id=1301768892 instance=ExtResource("1_res4m")]
-position = Vector2(-1055, 48)
-
-[node name="StoneUnbreakable22" parent="." unique_id=542716872 instance=ExtResource("1_res4m")]
-position = Vector2(-954, 48)
-
-[node name="StoneUnbreakable23" parent="." unique_id=1073177315 instance=ExtResource("1_res4m")]
-position = Vector2(-853, 48)
-
-[node name="StoneUnbreakable24" parent="." unique_id=621727165 instance=ExtResource("1_res4m")]
-position = Vector2(-754, 48)
-
-[node name="StoneUnbreakable25" parent="." unique_id=338260502 instance=ExtResource("1_res4m")]
-position = Vector2(-653, 48)
-
-[node name="StoneUnbreakable26" parent="." unique_id=200481632 instance=ExtResource("1_res4m")]
-position = Vector2(-552, 48)
-
-[node name="StoneUnbreakable27" parent="." unique_id=1648768376 instance=ExtResource("1_res4m")]
-position = Vector2(-453, 48)
-
-[node name="StoneUnbreakable28" parent="." unique_id=1280623844 instance=ExtResource("1_res4m")]
-position = Vector2(-352, 48)
-
-[node name="StoneUnbreakable29" parent="." unique_id=2064730537 instance=ExtResource("1_res4m")]
-position = Vector2(-251, 48)
-
-[node name="StoneUnbreakable30" parent="." unique_id=1348934172 instance=ExtResource("1_res4m")]
-position = Vector2(-152, 48)
+position = Vector2(-1856, 64)
 
 [node name="moreRoad" type="Area2D" parent="." unique_id=700754011]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moreRoad" unique_id=535333794]
-position = Vector2(1488.5, -141.5)
+position = Vector2(1088, -136)
 shape = SubResource("RectangleShape2D_ex66l")
 
 [node name="moreRoad2" type="Area2D" parent="." unique_id=272360138]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moreRoad2" unique_id=1666619594]
-position = Vector2(-1490, -142)
+position = Vector2(-1088, -136)
 shape = SubResource("RectangleShape2D_ex66l")
+
+[node name="StoneUnbreakable" parent="." unique_id=1794573011 instance=ExtResource("1_res4m")]
+position = Vector2(-64, 64)
+
+[node name="StoneUnbreakable3" parent="." unique_id=491626196 instance=ExtResource("1_res4m")]
+position = Vector2(-832, 64)
+
+[node name="StoneUnbreakable4" parent="." unique_id=331578405 instance=ExtResource("1_res4m")]
+position = Vector2(-704, 64)
+
+[node name="StoneUnbreakable5" parent="." unique_id=1361840507 instance=ExtResource("1_res4m")]
+position = Vector2(-576, 64)
+
+[node name="StoneUnbreakable6" parent="." unique_id=1613510225 instance=ExtResource("1_res4m")]
+position = Vector2(-448, 64)
+
+[node name="StoneUnbreakable7" parent="." unique_id=1339498525 instance=ExtResource("1_res4m")]
+position = Vector2(-320, 64)
+
+[node name="StoneUnbreakable2" parent="." unique_id=1527319109 instance=ExtResource("1_res4m")]
+position = Vector2(-192, 64)
+
+[node name="StoneUnbreakable8" parent="." unique_id=1196005590 instance=ExtResource("1_res4m")]
+position = Vector2(-960, 64)
+
+[node name="StoneUnbreakable9" parent="." unique_id=2082894463 instance=ExtResource("1_res4m")]
+position = Vector2(-1728, 64)
+
+[node name="StoneUnbreakable10" parent="." unique_id=1583918933 instance=ExtResource("1_res4m")]
+position = Vector2(-1600, 64)
+
+[node name="StoneUnbreakable11" parent="." unique_id=435452336 instance=ExtResource("1_res4m")]
+position = Vector2(-1472, 64)
+
+[node name="StoneUnbreakable12" parent="." unique_id=1152837450 instance=ExtResource("1_res4m")]
+position = Vector2(-1344, 64)
+
+[node name="StoneUnbreakable13" parent="." unique_id=308918656 instance=ExtResource("1_res4m")]
+position = Vector2(-1216, 64)
+
+[node name="StoneUnbreakable14" parent="." unique_id=1872505684 instance=ExtResource("1_res4m")]
+position = Vector2(-1088, 64)
+
+[node name="StoneUnbreakable15" parent="." unique_id=618651826 instance=ExtResource("1_res4m")]
+position = Vector2(1728, 64)
+
+[node name="StoneUnbreakable16" parent="." unique_id=504254552 instance=ExtResource("1_res4m")]
+position = Vector2(960, 64)
+
+[node name="StoneUnbreakable17" parent="." unique_id=420433958 instance=ExtResource("1_res4m")]
+position = Vector2(1088, 64)
+
+[node name="StoneUnbreakable18" parent="." unique_id=2045838510 instance=ExtResource("1_res4m")]
+position = Vector2(1216, 64)
+
+[node name="StoneUnbreakable19" parent="." unique_id=2129020932 instance=ExtResource("1_res4m")]
+position = Vector2(1344, 64)
+
+[node name="StoneUnbreakable20" parent="." unique_id=1685226307 instance=ExtResource("1_res4m")]
+position = Vector2(1472, 64)
+
+[node name="StoneUnbreakable21" parent="." unique_id=567475993 instance=ExtResource("1_res4m")]
+position = Vector2(1600, 64)
+
+[node name="StoneUnbreakable22" parent="." unique_id=2043097070 instance=ExtResource("1_res4m")]
+position = Vector2(832, 64)
+
+[node name="StoneUnbreakable23" parent="." unique_id=1532061805 instance=ExtResource("1_res4m")]
+position = Vector2(64, 64)
+
+[node name="StoneUnbreakable24" parent="." unique_id=299304796 instance=ExtResource("1_res4m")]
+position = Vector2(192, 64)
+
+[node name="StoneUnbreakable25" parent="." unique_id=813141745 instance=ExtResource("1_res4m")]
+position = Vector2(320, 64)
+
+[node name="StoneUnbreakable26" parent="." unique_id=1615633293 instance=ExtResource("1_res4m")]
+position = Vector2(448, 64)
+
+[node name="StoneUnbreakable27" parent="." unique_id=45920314 instance=ExtResource("1_res4m")]
+position = Vector2(576, 64)
+
+[node name="StoneUnbreakable28" parent="." unique_id=343905670 instance=ExtResource("1_res4m")]
+position = Vector2(704, 64)
 
 [connection signal="area_entered" from="moreRoad" to="." method="_on_more_road_area_entered"]
 [connection signal="area_entered" from="moreRoad2" to="." method="_on_more_road_2_area_entered"]

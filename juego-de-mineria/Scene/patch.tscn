@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://8khsjkkv032a"]
+
+[ext_resource type="Script" uid="uid://ct30svr37ugx5" path="res://Scripts/patch.gd" id="1_tcwki"]
+[ext_resource type="Texture2D" uid="uid://cftm58xq3g2xy" path="res://Assets/Ground.png" id="2_pcdhi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2ywa"]
+size = Vector2(12, 12)
+
+[node name="patch" type="Node2D" unique_id=1794573011]
+scale = Vector2(2, 2)
+script = ExtResource("1_tcwki")
+
+[node name="heartStone" type="Area2D" parent="." unique_id=1778820499 groups=["floor"]]
+collision_mask = 96
+
+[node name="Ground" type="Sprite2D" parent="heartStone" unique_id=1782302945]
+texture = ExtResource("2_pcdhi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="heartStone" unique_id=1872874260]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_e2ywa")
+
+[connection signal="area_entered" from="heartStone" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="heartStone" to="." method="_on_area_2d_area_exited"]

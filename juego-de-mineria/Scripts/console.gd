@@ -7,6 +7,9 @@ var dataGoldV = -1
 var dataIronV = -1  
 var dataGemsV = -1
 
+func _ready():
+	visible=!visible
+
 func updateData(dataNew):
 	# Actualizar datos del inventario
 	dataGold = dataNew.gold

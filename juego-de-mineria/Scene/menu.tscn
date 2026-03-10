@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://drc8xvi8d5pew"]
+
+[ext_resource type="Script" uid="uid://b0rgncadlfe4l" path="res://Scripts/menu.gd" id="1_b23qx"]
+
+[node name="Menu" type="Control" unique_id=1782962435]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b23qx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1745287689]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 309.0
+offset_top = 63.0
+offset_right = -250.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Name" type="Label" parent="VBoxContainer" unique_id=1223823861]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "NOMBRE DE JUEGO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=2048576325]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "JUGAR"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1922771435]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "CONFIGURAR
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=500942268]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "SALIR
+"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

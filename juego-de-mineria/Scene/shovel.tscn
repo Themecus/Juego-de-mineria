@@ -7,6 +7,7 @@
 [node name="Shovel" type="Node2D" unique_id=1461786888]
 
 [node name="Shovel" type="Area2D" parent="." unique_id=952406214]
+collision_layer = 32
 script = ExtResource("1_v6xw8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shovel" unique_id=998392224]

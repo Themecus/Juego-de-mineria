@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://b16vyshqqe1sj"]
+
+[ext_resource type="Script" uid="uid://3rnvpucessiq" path="res://Scripts/settings.gd" id="1_rukqk"]
+
+[node name="Settings" type="Control" unique_id=608241751]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rukqk")
+
+[node name="Return" type="Button" parent="." unique_id=342755197]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 513.0
+offset_right = 852.0
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 64
+text = "VOLVER"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=800961823]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_right = -576.0
+offset_bottom = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1735793033]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "JUGAR"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=532689481]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "CONFIGURAR
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=103900557]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "SALIR
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1585169930]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 612.0
+offset_right = -20.0
+offset_bottom = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Play" type="Button" parent="VBoxContainer2" unique_id=560356017]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "JUGAR"
+
+[node name="Settings" type="Button" parent="VBoxContainer2" unique_id=1424186066]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "CONFIGURAR
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer2" unique_id=1020809961]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "SALIR
+"
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

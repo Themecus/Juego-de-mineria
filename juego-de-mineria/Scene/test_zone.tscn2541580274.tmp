@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://xtc6sj371i1"]
+
+[ext_resource type="PackedScene" uid="uid://c0rgxvak7qf6f" path="res://Scene/player.tscn" id="1_0ssdb"]
+[ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="4_ogxn6"]
+[ext_resource type="PackedScene" uid="uid://ckcygb6noer5b" path="res://Scene/stoneG.tscn" id="5_vupva"]
+[ext_resource type="PackedScene" uid="uid://dt5ujd4v0d4ja" path="res://Scene/stoneI.tscn" id="6_vupva"]
+[ext_resource type="PackedScene" uid="uid://by1byoxd7bqje" path="res://Scene/stoneGe.tscn" id="7_k6k6t"]
+[ext_resource type="PackedScene" uid="uid://nyvteljwufu2" path="res://Scene/gold.tscn" id="8_dft1r"]
+[ext_resource type="PackedScene" uid="uid://q2qqtlq538qd" path="res://Scene/road.tscn" id="8_s3dcp"]
+[ext_resource type="PackedScene" uid="uid://dayawhnxjhmuw" path="res://Scene/stoneCaveSmall.tscn" id="9_r7m10"]
+[ext_resource type="PackedScene" uid="uid://basxibhk2yulf" path="res://Scene/car.tscn" id="9_s3dcp"]
+[ext_resource type="PackedScene" uid="uid://dxwou7ce4lemk" path="res://Scene/preCaves/stuffedCave/stuffCave1.tscn" id="10_r7m10"]
+[ext_resource type="PackedScene" uid="uid://c8f8mw76ib0ci" path="res://Scene/stoneCaveMediun.tscn" id="11_qvdh3"]
+[ext_resource type="PackedScene" uid="uid://jwydavwpo45m" path="res://Scene/stoneCaveBig.tscn" id="12_rwjn1"]
+[ext_resource type="PackedScene" uid="uid://blqqbpkt7iiex" path="res://Scene/stoneCaveHuge.tscn" id="13_b041c"]
+[ext_resource type="PackedScene" uid="uid://e25537bsmdjy" path="res://Scene/stoneCaveLong.tscn" id="14_45svd"]
+
+[node name="test zone" type="Node2D" unique_id=982874559]
+
+[node name="Player" parent="." unique_id=1874484111 instance=ExtResource("1_0ssdb")]
+position = Vector2(3459, 1175)
+scale = Vector2(1.017433, 1)
+
+[node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("4_ogxn6")]
+position = Vector2(-414, -587)
+
+[node name="StoneI" parent="." unique_id=384920675 instance=ExtResource("6_vupva")]
+position = Vector2(-398, -110)
+
+[node name="StoneGe" parent="." unique_id=1206551629 instance=ExtResource("7_k6k6t")]
+position = Vector2(-590, -185)
+
+[node name="StoneI2" parent="." unique_id=1622665586 instance=ExtResource("6_vupva")]
+position = Vector2(-620, 32)
+
+[node name="StoneG" parent="." unique_id=1293132955 instance=ExtResource("5_vupva")]
+position = Vector2(-108, -651)
+
+[node name="StoneG2" parent="." unique_id=757984609 instance=ExtResource("5_vupva")]
+position = Vector2(0, -459)
+
+[node name="StoneG3" parent="." unique_id=781074552 instance=ExtResource("5_vupva")]
+position = Vector2(191, -587)
+
+[node name="StoneG4" parent="." unique_id=1925604438 instance=ExtResource("5_vupva")]
+position = Vector2(280, -413)
+
+[node name="StoneG5" parent="." unique_id=189722323 instance=ExtResource("5_vupva")]
+position = Vector2(-334, -613)
+
+[node name="Stone2" parent="." unique_id=150805686 instance=ExtResource("4_ogxn6")]
+position = Vector2(-492, -613)
+
+[node name="Stone3" parent="." unique_id=2106821284 instance=ExtResource("4_ogxn6")]
+position = Vector2(-670, -349)
+
+[node name="Gold" parent="." unique_id=565720635 instance=ExtResource("8_dft1r")]
+position = Vector2(-907, -195.99998)
+
+[node name="Car" parent="." unique_id=1749743340 instance=ExtResource("9_s3dcp")]
+position = Vector2(216, 230)
+
+[node name="Road" parent="." unique_id=1656459966 instance=ExtResource("8_s3dcp")]
+position = Vector2(50, 271)
+
+[node name="StuffCave1" parent="." unique_id=494965830 instance=ExtResource("10_r7m10")]
+position = Vector2(1686, -1882)
+
+[node name="StuffCave2" parent="." unique_id=900153783 instance=ExtResource("10_r7m10")]
+position = Vector2(2182, -1882)
+
+[node name="stoneCaveHuge" parent="." unique_id=1170135427 instance=ExtResource("13_b041c")]
+position = Vector2(14814, 2450)
+
+[node name="stoneCaveLong" parent="." unique_id=1486240867 instance=ExtResource("14_45svd")]
+position = Vector2(19059, 2473)
+
+[node name="stoneCaveBig" parent="." unique_id=1454814554 instance=ExtResource("12_rwjn1")]
+position = Vector2(3194, 1753)
+
+[node name="stoneCaveHuge2" parent="." unique_id=508364031 instance=ExtResource("13_b041c")]
+position = Vector2(3974, 1817)
+
+[node name="stoneCaveLong2" parent="." unique_id=1343049983 instance=ExtResource("14_45svd")]
+position = Vector2(4637, 1817)
+
+[node name="stoneCaveSmall" parent="." unique_id=48277870 instance=ExtResource("11_qvdh3")]
+position = Vector2(5369, 1817)
+
+[node name="stoneCaveSmall2" parent="." unique_id=992578974 instance=ExtResource("9_r7m10")]
+position = Vector2(6047, 1817)

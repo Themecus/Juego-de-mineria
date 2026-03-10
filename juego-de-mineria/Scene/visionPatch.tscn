@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dsvbh325htfg1"]
+
+[ext_resource type="Script" uid="uid://dhqdmhmbyqtmx" path="res://Scripts/visionPatch.gd" id="1_7ec0w"]
+[ext_resource type="PackedScene" uid="uid://8khsjkkv032a" path="res://Scene/patch.tscn" id="1_emdek"]
+
+[node name="visionPatch" type="Node2D" unique_id=2080355836]
+script = ExtResource("1_7ec0w")
+
+[node name="patch" parent="." unique_id=1794573011 instance=ExtResource("1_emdek")]
+position = Vector2(-192, -192)
+
+[node name="patch2" parent="." unique_id=530167898 instance=ExtResource("1_emdek")]
+position = Vector2(192, 192)
+
+[node name="patch3" parent="." unique_id=387176342 instance=ExtResource("1_emdek")]
+position = Vector2(64, 192)
+
+[node name="patch4" parent="." unique_id=2084811651 instance=ExtResource("1_emdek")]
+position = Vector2(-64, 192)
+
+[node name="patch5" parent="." unique_id=117481292 instance=ExtResource("1_emdek")]
+position = Vector2(-192, 192)
+
+[node name="patch6" parent="." unique_id=2083939050 instance=ExtResource("1_emdek")]
+position = Vector2(192, 64)
+
+[node name="patch7" parent="." unique_id=685509977 instance=ExtResource("1_emdek")]
+position = Vector2(64, 64)
+
+[node name="patch8" parent="." unique_id=649558550 instance=ExtResource("1_emdek")]
+position = Vector2(-64, 64)
+
+[node name="patch9" parent="." unique_id=201588788 instance=ExtResource("1_emdek")]
+position = Vector2(-192, 64)
+
+[node name="patch10" parent="." unique_id=1616601248 instance=ExtResource("1_emdek")]
+position = Vector2(192, -64)
+
+[node name="patch11" parent="." unique_id=874589194 instance=ExtResource("1_emdek")]
+position = Vector2(64, -64)
+
+[node name="patch12" parent="." unique_id=1688766573 instance=ExtResource("1_emdek")]
+position = Vector2(-64, -64)
+
+[node name="patch13" parent="." unique_id=144882593 instance=ExtResource("1_emdek")]
+position = Vector2(-192, -64)
+
+[node name="patch14" parent="." unique_id=99726069 instance=ExtResource("1_emdek")]
+position = Vector2(192, -192)
+
+[node name="patch15" parent="." unique_id=736214220 instance=ExtResource("1_emdek")]
+position = Vector2(64, -192)
+
+[node name="patch16" parent="." unique_id=363465326 instance=ExtResource("1_emdek")]
+position = Vector2(-64, -192)
+
+[connection signal="tree_exiting" from="patch" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch2" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch3" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch4" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch5" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch6" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch7" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch8" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch9" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch10" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch11" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch12" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch13" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch14" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch15" to="." method="_on_patch_tree_exiting"]
+[connection signal="tree_exiting" from="patch16" to="." method="_on_patch_tree_exiting"]

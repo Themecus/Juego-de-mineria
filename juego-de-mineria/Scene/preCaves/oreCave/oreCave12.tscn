@@ -1,0 +1,39 @@
+[gd_scene format=4 uid="uid://bdkq3jry7d3to"]
+
+[ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="1_13gb3"]
+[ext_resource type="PackedScene" uid="uid://duqq3vmmgvqvh" path="res://Scene/stoneUnbreakable.tscn" id="2_q1wdl"]
+[ext_resource type="PackedScene" uid="uid://dt5ujd4v0d4ja" path="res://Scene/stoneI.tscn" id="3_ah6qn"]
+[ext_resource type="PackedScene" uid="uid://ckcygb6noer5b" path="res://Scene/stoneG.tscn" id="4_j45ef"]
+[ext_resource type="PackedScene" uid="uid://by1byoxd7bqje" path="res://Scene/stoneGe.tscn" id="5_r0e3b"]
+[ext_resource type="PackedScene" uid="uid://dsvbh325htfg1" path="res://Scene/visionPatch.tscn" id="6_q1wdl"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xijsg"]
+scenes/1/scene = ExtResource("1_13gb3")
+scenes/2/scene = ExtResource("2_q1wdl")
+scenes/3/scene = ExtResource("3_ah6qn")
+scenes/4/scene = ExtResource("4_j45ef")
+scenes/5/scene = ExtResource("5_r0e3b")
+
+[sub_resource type="TileSet" id="TileSet_rvkqf"]
+sources/0 = SubResource("TileSetScenesCollectionSource_xijsg")
+
+[node name="oreCave12" type="Node2D" unique_id=494965830]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2059184580]
+tile_map_data = PackedByteArray("AAADABMAAAAAAAAAAQATAPv/AAAAAAAAAQATABMAAAAAAAAAAQD7/wsAAAAAAAAAAQATAAsAAAAAAAAAAQD7/xMAAAAAAAAAAQADAAMAAAAAAAAAAQALAAsAAAAAAAAAAQADAAsAAAAAAAAABQD7//v/AAAAAAAAAQADAPv/AAAAAAAAAQALAPv/AAAAAAAAAQATAAMAAAAAAAAAAQALAAMAAAAAAAAABQALABMAAAAAAAAABQD7/wMAAAAAAAAAAQA=")
+tile_set = SubResource("TileSet_rvkqf")
+
+[node name="up" type="Marker2D" parent="." unique_id=919554705]
+position = Vector2(120, -136)
+
+[node name="down" type="Marker2D" parent="." unique_id=545861615]
+position = Vector2(120, 376)
+
+[node name="right" type="Marker2D" parent="." unique_id=651923028]
+position = Vector2(376, 120)
+
+[node name="left" type="Marker2D" parent="." unique_id=790748428]
+position = Vector2(-136, 120)
+
+[node name="visionPatch" parent="." unique_id=2080355836 instance=ExtResource("6_q1wdl")]
+position = Vector2(118, 120)

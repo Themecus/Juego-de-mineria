@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://dt5ujd4v0d4ja"]
 
 [ext_resource type="Script" uid="uid://bnpdndqubr3sd" path="res://Scripts/stone_i.gd" id="1_ei7lq"]
+[ext_resource type="Texture2D" uid="uid://b0ui4of884kv1" path="res://Assets/Iron.png" id="2_1eoal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pylgf"]
+size = Vector2(25.599998, 25.599998)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2ywa"]
+size = Vector2(24, 24)
 
 [node name="StoneI" type="Node2D" unique_id=1794573011]
 script = ExtResource("1_ei7lq")
@@ -15,18 +18,16 @@ script = ExtResource("1_ei7lq")
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_pylgf")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=2094714773]
-offset_left = -50.0
-offset_top = -51.0
-offset_right = 51.0
-offset_bottom = 52.0
-color = Color(0.9955426, 0.69344366, 0.43435958, 1)
+[node name="heartStone" type="Area2D" parent="." unique_id=1778820499]
+collision_mask = 96
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1778820499]
+[node name="Iron" type="Sprite2D" parent="heartStone" unique_id=722749395]
+scale = Vector2(2, 2)
+texture = ExtResource("2_1eoal")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1872874260]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="heartStone" unique_id=1872874260]
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_e2ywa")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="heartStone" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="heartStone" to="." method="_on_area_2d_area_exited"]

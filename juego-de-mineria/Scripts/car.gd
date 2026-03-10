@@ -3,14 +3,19 @@ extends CharacterBody2D
 var moving_fast = 1000
 var key = false
 var player_original_parent = null
-
+@onready var menu=$MenuPersonal
 @onready var player = $"../../Player" #jugador
 @onready var carCamara = $Camera2D #camara del carro
 @onready var exitMarker = $Marker2D  # El punto para la salida del jugador
 
+func _ready():
+	menu.visible=false
+
+
 #dato: si el jugador es eliminado del juego, el carro toma control de la camara y acciones
 func _process(delta):
 	if key == true:
+		pauseMenu()
 		enterVehicle()#Entraremos en vehiculo
 		moving(delta)# Mover vehículo
 		
@@ -21,6 +26,12 @@ func _process(delta):
 
 		if Input.is_action_pressed("Touch"):#Si presionamos espacio salimos del vehiculo
 			exitVehicule()
+
+func pauseMenu():#con esto haremos aparecer el menu y detener el juego
+	if Input.is_action_just_pressed("Menu"):
+		menu.visible=!menu.visible
+		get_tree().paused = !get_tree().paused
+		menu.process_mode = PROCESS_MODE_ALWAYS
 
 func enterVehicle():
 	# Guardar al padre del jugador original aqui dentro

@@ -7,15 +7,17 @@ var player_original_parent = null
 @onready var player = $"../../Player" #jugador
 @onready var carCamara = $Camera2D #camara del carro
 @onready var exitMarker = $Marker2D  # El punto para la salida del jugador
-
+@onready var menuUpgrades= $menuUpgrades#esta cosa es para abrir la pestana de mejoras
 func _ready():
 	menu.visible=false
+	menuUpgrades.visible=false
 
 
 #dato: si el jugador es eliminado del juego, el carro toma control de la camara y acciones
 func _process(delta):
 	if key == true:
 		pauseMenu()
+		pauseUpgrade()
 		enterVehicle()#Entraremos en vehiculo
 		moving(delta)# Mover vehículo
 		
@@ -32,6 +34,12 @@ func pauseMenu():#con esto haremos aparecer el menu y detener el juego
 		menu.visible=!menu.visible
 		get_tree().paused = !get_tree().paused
 		menu.process_mode = PROCESS_MODE_ALWAYS
+
+func pauseUpgrade():
+	if Input.is_action_just_pressed("Upgrades"):
+		menuUpgrades.visible=!menu.visible
+		get_tree().paused = !get_tree().paused
+		menuUpgrades.process_mode = PROCESS_MODE_ALWAYS
 
 func enterVehicle():
 	# Guardar al padre del jugador original aqui dentro

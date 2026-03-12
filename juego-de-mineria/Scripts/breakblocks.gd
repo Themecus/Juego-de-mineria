@@ -12,7 +12,8 @@ var oreInstance
 var capacity=0
 
 func _ready():
-	pass
+	miningPower=PLAYERDATA.mining
+
 
 func breaker(delta):#esto es para el taladro principal
 	durability=durability-delta*miningPower

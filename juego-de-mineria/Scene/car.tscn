@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bb3rigodtb25" path="res://Scripts/car.gd" id="1_cd047"]
 [ext_resource type="PackedScene" uid="uid://c02xyl1lwb2rl" path="res://Scene/vault.tscn" id="2_d7vpe"]
 [ext_resource type="PackedScene" uid="uid://bb52h8o6letsx" path="res://Scene/menuPersonal.tscn" id="2_uukhu"]
+[ext_resource type="PackedScene" uid="uid://d1j4ab3w8t8ua" path="res://Scene/menuUpgrades.tscn" id="4_kkigb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7vpe"]
 size = Vector2(161.5, 29)
@@ -11,6 +12,12 @@ size = Vector2(161.5, 29)
 
 [node name="Car" type="CharacterBody2D" parent="." unique_id=1608034208]
 script = ExtResource("1_cd047")
+
+[node name="menuUpgrades" parent="Car" unique_id=2078814137 instance=ExtResource("4_kkigb")]
+offset_left = -428.0
+offset_top = -309.0
+offset_right = -428.0
+offset_bottom = -309.0
 
 [node name="MenuPersonal" parent="Car" unique_id=1782962435 instance=ExtResource("2_uukhu")]
 visible = false

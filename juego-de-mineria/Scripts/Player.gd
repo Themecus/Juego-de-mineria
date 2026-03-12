@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-var moving_fast=400#velocidad para moverse
+var moving_fast=0#velocidad para moverse
+var limitOres=0#Limite de la bolsa
 var interaction_zone=false
 #var collectable=null#si quieres llaamar funciones desde otro sitio debes
 #1) crear una variable nulificada
@@ -10,7 +11,7 @@ var vault#el inventario donde guardaremos los minerales, ilimitado
 @onready var menu=$MenuPersonal
 var points=0
 var nameOre=""
-var limitOres=10
+
 var oresCloset=0
 var itemBomb = preload("res://Scene/bomb.tscn")
 
@@ -18,15 +19,17 @@ func _ready():
 	var inventoryClass = load("res://Scripts/inventory.gd")#con esto podemos llamar scripts que no tengan nodos asociados
 	inventory = inventoryClass.new()  # Crear NUEVA instancia
 	vault = inventoryClass.new()  
+	moving_fast=PLAYERDATA.speed
+	limitOres=PLAYERDATA.bagLimit
 	menu.visible=false
 
 func _process(delta):
 	pauseMenu()
+	upgrade()
 	console.updateData(inventory)#la info de actualiza constantemente en console
 	console.updateDataVault(vault)#la info de actualiza constantemente en console
+	PLAYERDATA.saveVault(vault)
 	action(delta)#aqui iran todas las acciones de nuestro pj
-	
-	
 
 func action(delta):
 	moving(delta)#esta sera de movimiento
@@ -35,6 +38,10 @@ func action(delta):
 	
 	#useItem()#Aqui activaremos el item en uso, como bombas o cosas de apoyo
 	#este ultimo queda desabilitado hasta nuevo aviso, tenemos que ver como equipar diferentes items
+
+func upgrade():
+	moving_fast=PLAYERDATA.speed
+	limitOres=PLAYERDATA.bagLimit
 
 func pauseMenu():#con esto haremos aparecer el menu y detener el juego
 	if Input.is_action_just_pressed("Menu"):

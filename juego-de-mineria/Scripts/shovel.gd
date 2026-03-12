@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var shovel = $"."
 @onready var collision_shape = $CollisionShape2D
 @onready var player = get_parent()  # Siendo la pala  hijo del jugador, sacaremos la informacion de el
 @export var max_distance = 100  # Máxima distancia del jugador y la pala
@@ -10,13 +11,18 @@ var target_position = Vector2.ZERO
 func _ready():
 	visible = false
 	collision_shape.disabled = true
+	
 
 func _process(delta):
 	handle_input(delta)
+	estirar_pala()
 	
 	# si esta activado, comenzara la rotacion del raton
 	if visible:
 		follow_mouse(delta)
+
+func estirar_pala():
+	shovel.scale.x = PLAYERDATA.sizeDrill
 
 func handle_input(delta):
 	if Input.is_action_pressed("Drill"):

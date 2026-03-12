@@ -136,18 +136,19 @@ Este apartado se manejará cuando ya exista una base lo suficientemente sólida.
 ## INTERFACES
 - [x] Hacer un **menú** en la pantalla de inicio.
 - [x] Hacer un menu personal para detener el progreso del juego.
-
+- [x] Ver cómo implementar un **sistema de mejoras**, qué mejorar y qué no.
+- [x] Hacer **interfaz** para el sistema de mejoras.
+- [x] Crear una forma de gastar lo que recolectemos
+- [x] Hacer un interfaz que indique cuantos recursos llevo y un limite de eso (para el carro)
 ---
 # OBJETIVOS ACTUALES
 
 - [ ] Planear mejor el **loop de juego**.
 - [ ] Sistema de guardado, de momento guardar los datos basicos
-- [ ] Ver cómo implementar un **sistema de mejoras**, qué mejorar y qué no.
+
 - [ ] Planear **enemigos**. Una idea es generar cuartos grandes con enemigos presentes.
 - [ ] Investigar diferentes resoluciones
 - [ ] Organizar las scenes
 - [ ] Crea otro item y trata de en el menu de mejoras como cambiarlos
-
-- [ ] Hacer **interfaz** para el sistema de mejoras.
-- [ ] Crear una forma de gastar lo que recolectemos
-- [ ] Hacer un interfaz que indique cuantos recursos llevo y un limite de eso
+- [ ] Mejorar el sistemas de sombras, haciendo que al romper un bloque toda la sombra desaparezca
+- [ ] Hacer un interfaz que indique cuantos recursos llevo y un limite de eso (para el personaje)

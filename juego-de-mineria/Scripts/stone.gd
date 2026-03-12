@@ -4,6 +4,7 @@ extends BreakBlocks  #heredas de tu clase base
 #por lo demas es como si ya estuvieran aqui
 func _ready():
 	durability=2.5
+	miningPower=PLAYERDATA.mining
 
 
 func _process(delta):

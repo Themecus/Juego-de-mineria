@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://d1j4ab3w8t8ua"]
+
+[ext_resource type="Script" uid="uid://becd1jiyopxlk" path="res://Scripts/menuUpgrades.gd" id="1_if078"]
+
+[node name="menuUpgrades" type="Control" unique_id=2078814137]
+z_index = 128
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_if078")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=632985245]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1.4643909, 1.4643909, 1.4643909, 0.47058824)
+
+[node name="close" type="Button" parent="." unique_id=1191404879]
+layout_mode = 0
+offset_left = 1033.0
+offset_top = 21.0
+offset_right = 1121.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 70
+text = "X"
+
+[node name="speed" type="Button" parent="." unique_id=1910879503]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 264.0
+offset_right = 274.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 40
+text = "Speed"
+
+[node name="mining" type="Button" parent="." unique_id=506309875]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 264.0
+offset_right = 1054.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 40
+text = "Mining"
+
+[node name="bagLimit" type="Button" parent="." unique_id=11347781]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 264.0
+offset_right = 550.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 40
+text = "Bag limit"
+
+[node name="sizeDrill" type="Button" parent="." unique_id=1544160135]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 264.0
+offset_right = 822.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 40
+text = "Size drill
+
+"
+
+[node name="prueba" type="Button" parent="." unique_id=149024939]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 88.0
+offset_right = 282.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 40
+text = "restar
+
+"
+
+[node name="Label" type="Label" parent="." unique_id=1100790153]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 437.0
+offset_right = 423.0
+offset_bottom = 562.0
+theme_override_font_sizes/font_size = 40
+
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="speed" to="." method="_on_speed_pressed"]
+[connection signal="pressed" from="mining" to="." method="_on_mining_pressed"]
+[connection signal="pressed" from="bagLimit" to="." method="_on_bag_limit_pressed"]
+[connection signal="pressed" from="sizeDrill" to="." method="_on_size_drill_pressed"]
+[connection signal="pressed" from="prueba" to="." method="_on_size_drill_pressed"]

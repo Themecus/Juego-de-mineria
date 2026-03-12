@@ -4,6 +4,8 @@ extends BreakBlocks  #heredas de tu clase base
 #por lo demas es como si ya estuvieran aqui
 func _ready():
 	durability=2
+	miningPower=PLAYERDATA.mining
+
 	ore=preload("res://Scene/gems.tscn") 
 
 

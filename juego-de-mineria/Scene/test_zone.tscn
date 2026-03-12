@@ -20,35 +20,86 @@
 [node name="test zone" type="Node2D" unique_id=982874559]
 
 [node name="Player" parent="." unique_id=1874484111 instance=ExtResource("1_0ssdb")]
-position = Vector2(1550, -285)
+position = Vector2(-14, -1570)
 scale = Vector2(1.017433, 1)
 
 [node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("4_ogxn6")]
 position = Vector2(-414, -587)
 
 [node name="StoneI" parent="." unique_id=384920675 instance=ExtResource("6_vupva")]
-position = Vector2(-398, -110)
+position = Vector2(-64, -986)
 
 [node name="StoneGe" parent="." unique_id=1206551629 instance=ExtResource("7_k6k6t")]
-position = Vector2(-590, -185)
+position = Vector2(160, -1330)
+
+[node name="StoneGe2" parent="." unique_id=888113971 instance=ExtResource("7_k6k6t")]
+position = Vector2(30, -1394)
+
+[node name="StoneGe3" parent="." unique_id=397656991 instance=ExtResource("7_k6k6t")]
+position = Vector2(-99, -1394)
+
+[node name="StoneGe4" parent="." unique_id=2015952328 instance=ExtResource("7_k6k6t")]
+position = Vector2(-206, -1394)
+
+[node name="StoneGe5" parent="." unique_id=1265217437 instance=ExtResource("7_k6k6t")]
+position = Vector2(-290, -1394)
+
+[node name="StoneGe6" parent="." unique_id=1105882534 instance=ExtResource("7_k6k6t")]
+position = Vector2(-354, -1394)
+
+[node name="StoneGe7" parent="." unique_id=1635446887 instance=ExtResource("7_k6k6t")]
+position = Vector2(-354, -1394)
 
 [node name="StoneI2" parent="." unique_id=1622665586 instance=ExtResource("6_vupva")]
-position = Vector2(-620, 32)
+position = Vector2(-162, -869)
+
+[node name="StoneI3" parent="." unique_id=557903226 instance=ExtResource("6_vupva")]
+position = Vector2(-270, -1050)
+
+[node name="StoneI4" parent="." unique_id=1578571464 instance=ExtResource("6_vupva")]
+position = Vector2(-354, -933)
+
+[node name="StoneI8" parent="." unique_id=1392162411 instance=ExtResource("6_vupva")]
+position = Vector2(-334, -810)
+
+[node name="StoneI9" parent="." unique_id=1634500274 instance=ExtResource("6_vupva")]
+position = Vector2(216, -1114)
+
+[node name="StoneI5" parent="." unique_id=1575244477 instance=ExtResource("6_vupva")]
+position = Vector2(-99, -1114)
+
+[node name="StoneI6" parent="." unique_id=1700416625 instance=ExtResource("6_vupva")]
+position = Vector2(50, -1114)
+
+[node name="StoneI7" parent="." unique_id=1963636030 instance=ExtResource("6_vupva")]
+position = Vector2(-398, -1114)
 
 [node name="StoneG" parent="." unique_id=1293132955 instance=ExtResource("5_vupva")]
-position = Vector2(-108, -651)
+position = Vector2(0, -727)
 
 [node name="StoneG2" parent="." unique_id=757984609 instance=ExtResource("5_vupva")]
-position = Vector2(0, -459)
+position = Vector2(-34, -523)
 
 [node name="StoneG3" parent="." unique_id=781074552 instance=ExtResource("5_vupva")]
-position = Vector2(191, -587)
+position = Vector2(191, -714)
 
 [node name="StoneG4" parent="." unique_id=1925604438 instance=ExtResource("5_vupva")]
-position = Vector2(280, -413)
+position = Vector2(158, -523)
+
+[node name="StoneG6" parent="." unique_id=670206652 instance=ExtResource("5_vupva")]
+position = Vector2(339, -810)
+
+[node name="StoneG9" parent="." unique_id=28793444 instance=ExtResource("5_vupva")]
+position = Vector2(114, -874)
+
+[node name="StoneG7" parent="." unique_id=2105315213 instance=ExtResource("5_vupva")]
+position = Vector2(306, -619)
+
+[node name="StoneG8" parent="." unique_id=2001225100 instance=ExtResource("5_vupva")]
+position = Vector2(306, -459)
 
 [node name="StoneG5" parent="." unique_id=189722323 instance=ExtResource("5_vupva")]
-position = Vector2(-270, -715)
+position = Vector2(-162, -663)
 
 [node name="Stone2" parent="." unique_id=150805686 instance=ExtResource("4_ogxn6")]
 position = Vector2(946, -349)

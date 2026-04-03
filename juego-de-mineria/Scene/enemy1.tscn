@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b0iljhns3yr17"]
+
+[ext_resource type="Script" uid="uid://c3ym14m628oe" path="res://Scripts/enemy1.gd" id="1_v2o78"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v2o78"]
+radius = 35.014282
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2fyd8"]
+radius = 37.65634
+
+[node name="enemy1" type="Node2D" unique_id=1497829582]
+
+[node name="enemy" type="RigidBody2D" parent="." unique_id=2146428146]
+script = ExtResource("1_v2o78")
+
+[node name="ColorRect" type="ColorRect" parent="enemy" unique_id=512696771]
+offset_left = -24.0
+offset_top = -22.0
+offset_right = 24.0
+offset_bottom = 23.0
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=643831421]
+shape = SubResource("CircleShape2D_v2o78")
+
+[node name="Area2D" type="Area2D" parent="enemy" unique_id=2019765988]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/Area2D" unique_id=482774953]
+shape = SubResource("CircleShape2D_2fyd8")
+
+[node name="rebound" type="Timer" parent="." unique_id=1050522048]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="area_entered" from="enemy/Area2D" to="enemy" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="rebound" to="enemy" method="_on_rebound_timeout"]

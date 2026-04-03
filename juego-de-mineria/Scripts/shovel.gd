@@ -15,13 +15,13 @@ func _ready():
 
 func _process(delta):
 	handle_input(delta)
-	estirar_pala()
+	sizeShovel()
 	
 	# si esta activado, comenzara la rotacion del raton
 	if visible:
 		follow_mouse(delta)
 
-func estirar_pala():
+func sizeShovel():
 	shovel.scale.x = PLAYERDATA.sizeDrill
 
 func handle_input(delta):

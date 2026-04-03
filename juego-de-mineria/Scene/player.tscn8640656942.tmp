@@ -4,12 +4,8 @@
 [ext_resource type="Script" uid="uid://cxit6ux4owh21" path="res://Scripts/mineralCounter.gd" id="2_r6jsd"]
 [ext_resource type="PackedScene" uid="uid://cgdikpyvawqkf" path="res://Scene/shovel.tscn" id="2_xa75v"]
 [ext_resource type="Script" uid="uid://b1jki3stir1xu" path="res://Scripts/console.gd" id="2_y8w33"]
-[ext_resource type="Script" uid="uid://d3ti44wauao5r" path="res://Scripts/save.gd" id="3_p6qlh"]
-[ext_resource type="Script" uid="uid://btcpko3plgvee" path="res://Scripts/delete.gd" id="4_2sw5t"]
 [ext_resource type="PackedScene" uid="uid://bgig465kd3gg2" path="res://Scene/bag.tscn" id="4_58ae2"]
-[ext_resource type="PackedScene" uid="uid://c0fcvsqqya61p" path="res://Scene/clock.tscn" id="5_ij4jb"]
 [ext_resource type="PackedScene" uid="uid://bb52h8o6letsx" path="res://Scene/menuPersonal.tscn" id="5_ivevv"]
-[ext_resource type="PackedScene" uid="uid://3tb57h6ravl2" path="res://Scene/gameOver.tscn" id="6_c68nv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
 radius = 20.0
@@ -41,47 +37,8 @@ text = "bolsa=0/10
 Oro= 0 Hierro= 0 Gemas= 0 "
 script = ExtResource("2_r6jsd")
 
-[node name="save" type="Button" parent="playerInterface" unique_id=469873008]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -106.0
-offset_bottom = 77.0
-grow_horizontal = 0
-text = "Guardar"
-script = ExtResource("3_p6qlh")
-
-[node name="delete" type="Button" parent="playerInterface" unique_id=491366750]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -106.0
-offset_top = 77.0
-offset_bottom = 154.0
-grow_horizontal = 0
-text = "Borrar"
-script = ExtResource("4_2sw5t")
-
-[node name="Clock" parent="playerInterface" unique_id=1364377695 instance=ExtResource("5_ij4jb")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-offset_left = -36.0
-offset_top = -66.0
-offset_right = -36.0
-offset_bottom = -66.0
-grow_vertical = 0
-
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1874484111]
 script = ExtResource("1_kelma")
-
-[node name="gameOver" parent="Player" unique_id=876260216 instance=ExtResource("6_c68nv")]
-visible = false
-offset_left = -575.0
-offset_top = -324.0
-offset_right = -575.0
-offset_bottom = -324.0
 
 [node name="MenuPersonal" parent="Player" unique_id=1782962435 instance=ExtResource("5_ivevv")]
 visible = false
@@ -114,16 +71,8 @@ shape = SubResource("CircleShape2D_y8w33")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/playerHitBox" unique_id=1265494291]
 shape = SubResource("RectangleShape2D_ivevv")
 
-[node name="stunTimer" type="Timer" parent="Player" unique_id=408597860]
-wait_time = 2.0
-one_shot = true
-
-[connection signal="pressed" from="playerInterface/save" to="playerInterface/save" method="_on_pressed"]
-[connection signal="pressed" from="playerInterface/delete" to="playerInterface/delete" method="_on_pressed"]
 [connection signal="area_entered" from="Player/Bag" to="Player" method="_on_bag_area_entered"]
 [connection signal="area_exited" from="Player/Bag" to="Player" method="_on_bag_area_exited"]
 [connection signal="body_entered" from="Player/Bag" to="Player" method="_on_bag_body_entered"]
 [connection signal="body_exited" from="Player/Bag" to="Player" method="_on_bag_body_exited"]
 [connection signal="area_entered" from="Player/playerHitBox" to="Player" method="_on_player_hit_box_area_entered"]
-[connection signal="body_entered" from="Player/playerHitBox" to="Player" method="_on_player_hit_box_body_entered"]
-[connection signal="timeout" from="Player/stunTimer" to="Player" method="_on_stun_timer_timeout"]

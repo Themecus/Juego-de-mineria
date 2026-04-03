@@ -9,16 +9,10 @@ func _process(delta):
 					"  GEMS: " + str(PLAYERDATA.vaultInfo.gems) + "\n" + \
 					"  TOTAL: " + str(PLAYERDATA.vaultInfo.gold +PLAYERDATA.vaultInfo.iron
 					 +PLAYERDATA.vaultInfo.gems)
-	pass
-
-
-
-
 
 func _on_close_pressed() -> void:
 	get_tree().paused = !get_tree().paused
 	$".".visible=!$".".visible
-
 
 func _on_speed_pressed() -> void:
 	if PLAYERDATA.vaultInfo.gems>=1:
@@ -40,3 +34,15 @@ func _on_size_drill_pressed() -> void:
 		PLAYERDATA.sizeDrill+=0.5
 		PLAYERDATA.vaultInfo.iron-=3
 		PLAYERDATA.vaultInfo.gold-=2
+
+func _on_item_1_pressed() -> void:
+	if PLAYERDATA.bombDrill==false and PLAYERDATA.box==false:
+		PLAYERDATA.bomb=true
+
+func _on_item_2_pressed() -> void:
+	if PLAYERDATA.bomb==false and PLAYERDATA.box==false:
+		PLAYERDATA.bombDrill=true
+
+func _on_item_3_pressed() -> void:
+	if PLAYERDATA.bombDrill==false and PLAYERDATA.bomb==false:
+		PLAYERDATA.box=true

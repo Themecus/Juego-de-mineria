@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://3tb57h6ravl2"]
+
+[ext_resource type="Script" uid="uid://cktxbm30mg7pe" path="res://Scripts/gameOver.gd" id="1_bpxgm"]
+
+[node name="gameOver" type="Control" unique_id=876260216]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bpxgm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=379552101]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 1, 1, 0.29803923)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=435675532]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=563956476]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "FIN DEL JUEGO GIIIIIIIIIIIIIIIIIL"
+horizontal_alignment = 1
+
+[node name="continue" type="Button" parent="VBoxContainer" unique_id=1606983604]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "Reiniciar"
+
+[node name="end" type="Button" parent="VBoxContainer" unique_id=1308939001]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/end" to="." method="_on_end_pressed"]

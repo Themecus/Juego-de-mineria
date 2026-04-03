@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://6e8d8jk5rm4s"]
+
+[ext_resource type="Script" uid="uid://7clsrtyqhvqt" path="res://Scripts/stonePortal.gd" id="1_dgt64"]
+[ext_resource type="Texture2D" uid="uid://cftm58xq3g2xy" path="res://Assets/Ground.png" id="2_dgt64"]
+[ext_resource type="Texture2D" uid="uid://bftc7gat4lree" path="res://Assets/Generate.png" id="3_dgt64"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pylgf"]
+size = Vector2(12.799999, 12.799999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2ywa"]
+size = Vector2(12, 12)
+
+[node name="Stone" type="Node2D" unique_id=1794573011]
+scale = Vector2(2, 2)
+script = ExtResource("1_dgt64")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=765938581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1401636829]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_pylgf")
+
+[node name="heartStone" type="Area2D" parent="." unique_id=1778820499 groups=["floor"]]
+collision_mask = 96
+
+[node name="Ground" type="Sprite2D" parent="heartStone" unique_id=1782302945]
+texture = ExtResource("2_dgt64")
+
+[node name="Generate" type="Sprite2D" parent="heartStone" unique_id=304271768]
+position = Vector2(-16, -16)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_dgt64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="heartStone" unique_id=1872874260]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_e2ywa")
+
+[connection signal="area_entered" from="heartStone" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="heartStone" to="." method="_on_area_2d_area_exited"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dnj8bw1mfn7k7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_luh1x"]
+size = Vector2(40, 39)
+
+[node name="box" type="Node2D" unique_id=1779378503]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=872665908]
+mass = 0.042
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 50
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1784259635]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_luh1x")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D" unique_id=400855411]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.43499294, 0.35022113, 0.24776036, 1)

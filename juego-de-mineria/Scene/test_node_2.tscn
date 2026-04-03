@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bytmmroth5351"]
+
+[ext_resource type="PackedScene" uid="uid://c0rgxvak7qf6f" path="res://Scene/player.tscn" id="1_osmm0"]
+[ext_resource type="Script" uid="uid://cl482im1kew7v" path="res://Scripts/test_node_2.gd" id="1_tfv7o"]
+[ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="2_tfv7o"]
+
+[node name="test_node2" type="Node2D" unique_id=849145538]
+script = ExtResource("1_tfv7o")
+
+[node name="Player" parent="." unique_id=1812824144 instance=ExtResource("1_osmm0")]
+position = Vector2(180, 58)
+
+[node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("2_tfv7o")]
+position = Vector2(-219, 301)
+
+[node name="Stone2" parent="." unique_id=1768295140 instance=ExtResource("2_tfv7o")]
+position = Vector2(-224, 135)
+
+[node name="Stone3" parent="." unique_id=1403749716 instance=ExtResource("2_tfv7o")]
+position = Vector2(-226, -21)
+
+[node name="Stone4" parent="." unique_id=1700516199 instance=ExtResource("2_tfv7o")]
+position = Vector2(-231, -180)

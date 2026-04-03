@@ -34,4 +34,4 @@ collision_layer = 64
 shape = SubResource("CircleShape2D_fvttr")
 
 [connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]
-[connection signal="area_entered" from="RigidBody2D/drillZone" to="." method="_on_explosion_zone_area_entered"]
+[connection signal="area_exited" from="RigidBody2D/drillZone" to="." method="_on_drill_zone_area_exited"]

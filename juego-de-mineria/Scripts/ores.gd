@@ -1,7 +1,6 @@
 extends Node2D  
 class_name ores
 var points: float=0.0
-var miniShake=false
 
 #func process(delta):
 	#if miniShake==true:

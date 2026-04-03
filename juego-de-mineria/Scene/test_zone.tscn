@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://xtc6sj371i1"]
 
 [ext_resource type="PackedScene" uid="uid://c0rgxvak7qf6f" path="res://Scene/player.tscn" id="1_0ssdb"]
+[ext_resource type="Script" uid="uid://d0oqu5xcftiag" path="res://Scripts/test_zone.gd" id="1_cr1r6"]
 [ext_resource type="PackedScene" uid="uid://dfjsphvob37wg" path="res://Scene/stone.tscn" id="4_ogxn6"]
 [ext_resource type="PackedScene" uid="uid://ckcygb6noer5b" path="res://Scene/stoneG.tscn" id="5_vupva"]
 [ext_resource type="PackedScene" uid="uid://dt5ujd4v0d4ja" path="res://Scene/stoneI.tscn" id="6_vupva"]
 [ext_resource type="PackedScene" uid="uid://by1byoxd7bqje" path="res://Scene/stoneGe.tscn" id="7_k6k6t"]
-[ext_resource type="PackedScene" uid="uid://nyvteljwufu2" path="res://Scene/gold.tscn" id="8_dft1r"]
+[ext_resource type="Script" uid="uid://bd58utkwnpmm5" path="res://Scripts/oreI.gd" id="7_vgv8x"]
 [ext_resource type="PackedScene" uid="uid://q2qqtlq538qd" path="res://Scene/road.tscn" id="8_s3dcp"]
 [ext_resource type="PackedScene" uid="uid://dayawhnxjhmuw" path="res://Scene/stoneCaveSmall.tscn" id="9_r7m10"]
-[ext_resource type="PackedScene" uid="uid://basxibhk2yulf" path="res://Scene/car.tscn" id="9_s3dcp"]
 [ext_resource type="PackedScene" uid="uid://dxwou7ce4lemk" path="res://Scene/preCaves/stuffedCave/stuffCave1.tscn" id="10_r7m10"]
 [ext_resource type="PackedScene" uid="uid://c8f8mw76ib0ci" path="res://Scene/stoneCaveMediun.tscn" id="11_qvdh3"]
 [ext_resource type="PackedScene" uid="uid://jwydavwpo45m" path="res://Scene/stoneCaveBig.tscn" id="12_rwjn1"]
@@ -16,11 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://e25537bsmdjy" path="res://Scene/stoneCaveLong.tscn" id="14_45svd"]
 [ext_resource type="PackedScene" uid="uid://fpye265xjhob" path="res://Scene/preCaves/oreCave/oreCave1.tscn" id="15_isqrh"]
 [ext_resource type="PackedScene" uid="uid://dsvbh325htfg1" path="res://Scene/visionPatch.tscn" id="16_oqguo"]
+[ext_resource type="PackedScene" uid="uid://b0iljhns3yr17" path="res://Scene/enemy1.tscn" id="19_vnadv"]
+[ext_resource type="PackedScene" uid="uid://6e8d8jk5rm4s" path="res://Scene/stonePortal.tscn" id="21_bls0i"]
+[ext_resource type="PackedScene" uid="uid://cldg44bbswceu" path="res://Scene/city.tscn" id="22_ncfde"]
 
 [node name="test zone" type="Node2D" unique_id=982874559]
+script = ExtResource("1_cr1r6")
 
 [node name="Player" parent="." unique_id=1874484111 instance=ExtResource("1_0ssdb")]
-position = Vector2(-14, -1570)
+position = Vector2(-34, -81)
 scale = Vector2(1.017433, 1)
 
 [node name="Stone" parent="." unique_id=1794573011 instance=ExtResource("4_ogxn6")]
@@ -100,18 +104,13 @@ position = Vector2(306, -459)
 
 [node name="StoneG5" parent="." unique_id=189722323 instance=ExtResource("5_vupva")]
 position = Vector2(-162, -663)
+script = ExtResource("7_vgv8x")
 
 [node name="Stone2" parent="." unique_id=150805686 instance=ExtResource("4_ogxn6")]
 position = Vector2(946, -349)
 
 [node name="Stone3" parent="." unique_id=2106821284 instance=ExtResource("4_ogxn6")]
 position = Vector2(-670, -349)
-
-[node name="Gold" parent="." unique_id=565720635 instance=ExtResource("8_dft1r")]
-position = Vector2(-907, -195.99998)
-
-[node name="Car" parent="." unique_id=1749743340 instance=ExtResource("9_s3dcp")]
-position = Vector2(216, 230)
 
 [node name="Road" parent="." unique_id=1656459966 instance=ExtResource("8_s3dcp")]
 position = Vector2(50, 271)
@@ -148,3 +147,15 @@ position = Vector2(-98, -1970)
 
 [node name="stoneCaveMediun" parent="." unique_id=598970540 instance=ExtResource("11_qvdh3")]
 position = Vector2(3843, 2601)
+
+[node name="Stone4" parent="." unique_id=1013925766 instance=ExtResource("21_bls0i")]
+position = Vector2(2215, -486)
+
+[node name="city" parent="." unique_id=1553351366 instance=ExtResource("22_ncfde")]
+position = Vector2(0, 196)
+
+[node name="enemy1" parent="." unique_id=1497829582 instance=ExtResource("19_vnadv")]
+position = Vector2(-354, 109)
+
+[node name="enemy2" parent="." unique_id=1556596151 instance=ExtResource("19_vnadv")]
+position = Vector2(498, 109)

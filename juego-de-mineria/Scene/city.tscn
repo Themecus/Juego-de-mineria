@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cldg44bbswceu"]
+
+[ext_resource type="Texture2D" uid="uid://ub4tohe4g4bg" path="res://icon.svg" id="1_0611m"]
+[ext_resource type="Script" uid="uid://bvjtci5jsvw2t" path="res://Scripts/city.gd" id="1_ng2j2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng2j2"]
+size = Vector2(142, 186)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnwr7"]
+size = Vector2(129, 127)
+
+[node name="city" type="Node2D" unique_id=1553351366]
+script = ExtResource("1_ng2j2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1080016893]
+
+[node name="Icon" type="Sprite2D" parent="Area2D" unique_id=1930353025]
+texture = ExtResource("1_0611m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2042740986]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ng2j2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2090560503]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1964590209]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_jnwr7")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

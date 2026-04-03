@@ -84,9 +84,40 @@ offset_right = 423.0
 offset_bottom = 562.0
 theme_override_font_sizes/font_size = 40
 
+[node name="item1" type="Button" parent="." unique_id=2071018730]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 459.0
+offset_right = 274.0
+offset_bottom = 546.0
+theme_override_font_sizes/font_size = 40
+text = "Bomb"
+
+[node name="item2" type="Button" parent="." unique_id=1389840787]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 459.0
+offset_right = 696.0
+offset_bottom = 546.0
+theme_override_font_sizes/font_size = 40
+text = "Bomb Drill"
+
+[node name="item3" type="Button" parent="." unique_id=947255176]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 459.0
+offset_right = 1036.0
+offset_bottom = 546.0
+theme_override_font_sizes/font_size = 40
+text = "Box
+"
+
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="speed" to="." method="_on_speed_pressed"]
 [connection signal="pressed" from="mining" to="." method="_on_mining_pressed"]
 [connection signal="pressed" from="bagLimit" to="." method="_on_bag_limit_pressed"]
 [connection signal="pressed" from="sizeDrill" to="." method="_on_size_drill_pressed"]
 [connection signal="pressed" from="prueba" to="." method="_on_size_drill_pressed"]
+[connection signal="pressed" from="item1" to="." method="_on_item_1_pressed"]
+[connection signal="pressed" from="item2" to="." method="_on_item_2_pressed"]
+[connection signal="pressed" from="item3" to="." method="_on_item_3_pressed"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c0fcvsqqya61p"]
+
+[ext_resource type="Script" uid="uid://b3inxx1c4fso8" path="res://Scripts/clock.gd" id="1_hg2lb"]
+
+[node name="Clock" type="Control" unique_id=1364377695]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hg2lb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1237931707]
+layout_mode = 0
+offset_right = 148.0
+offset_bottom = 66.0
+
+[node name="Label" type="Label" parent="." unique_id=2137853818]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 126.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "5:00
+"
+
+[node name="Timer" type="Timer" parent="." unique_id=778250403]

@@ -16,6 +16,7 @@ func _ready():
 #dato: si el jugador es eliminado del juego, el carro toma control de la camara y acciones
 func _process(delta):
 	if key == true:
+		PLAYERDATA.stopItem=false
 		pauseMenu()
 		pauseUpgrade()
 		enterVehicle()#Entraremos en vehiculo
@@ -27,6 +28,7 @@ func _process(delta):
 		carCamara.enabled = true
 
 		if Input.is_action_pressed("Touch"):#Si presionamos espacio salimos del vehiculo
+			PLAYERDATA.stopItem=true
 			exitVehicule()
 
 func pauseMenu():#con esto haremos aparecer el menu y detener el juego

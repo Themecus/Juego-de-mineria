@@ -6,10 +6,10 @@ func _ready():
 	durability=2.5
 	miningPower=PLAYERDATA.mining
 
-	ore=preload("res://Scene/gems.tscn") 
+	ore=preload("res://Scene/portalEntrance.tscn") 
 
 
 func _process(delta):
 	if dig==true:
-		breaker(delta)
+		breakerPortal(delta)
 		

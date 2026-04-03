@@ -7,53 +7,94 @@ var interaction_zone=false
 #1) crear una variable nulificada
 var inventory#el inventario personal del usuario, limitado
 var vault#el inventario donde guardaremos los minerales, ilimitado
-@onready var console=$Camera2D/console
+@onready var console=$"../playerInterface/console"
+@onready var interfaz=$"../playerInterface/mineralCounter"
 @onready var menu=$MenuPersonal
+@onready var menuEnd=$gameOver
+var stun=true
 var points=0
 var nameOre=""
-
 var oresCloset=0
-var itemBomb = preload("res://Scene/bomb.tscn")
+var bombItem=false
+var bombDrillItem=false
+var boxItem=false
+var stopItem
 
 func _ready():
 	var inventoryClass = load("res://Scripts/inventory.gd")#con esto podemos llamar scripts que no tengan nodos asociados
 	inventory = inventoryClass.new()  # Crear NUEVA instancia
 	vault = inventoryClass.new()  
+	if PLAYERDATA.getSaveVault()!=null:
+		vault=PLAYERDATA.getSaveVault()
+
+	else:
+		print("sin info")
 	moving_fast=PLAYERDATA.speed
 	limitOres=PLAYERDATA.bagLimit
 	menu.visible=false
-
+	menuEnd.visible=false
+	bombItem=PLAYERDATA.bomb
+	bombDrillItem=PLAYERDATA.bombDrill
+	boxItem=PLAYERDATA.box
+	stopItem=PLAYERDATA.stopItem
+	
+	
 func _process(delta):
 	pauseMenu()
+	resetMenu()
 	upgrade()
 	console.updateData(inventory)#la info de actualiza constantemente en console
 	console.updateDataVault(vault)#la info de actualiza constantemente en console
-	PLAYERDATA.saveVault(vault)
+	interfaz.upgradeInfo(vault)
+	PLAYERDATA.setSaveVault(vault)#aqui guardaremos la informacion del vault y actualizaremos
+	stopItem=PLAYERDATA.stopItem#si esta montado en el vehiculo, no podra usar objetos
+	PLAYERDATA.positionPlayer=position
 	action(delta)#aqui iran todas las acciones de nuestro pj
 
 func action(delta):
-	moving(delta)#esta sera de movimiento
-	touch(delta)#aqui donde interaccione
-	activeConsole()
+	if stun:
+		moving(delta)#esta sera de movimiento
+		touch(delta)#aqui donde interaccione
+		activeConsole()
+		useItem()#Aqui activaremos el item en uso, como bombas o cosas de apoyo
 	
-	#useItem()#Aqui activaremos el item en uso, como bombas o cosas de apoyo
-	#este ultimo queda desabilitado hasta nuevo aviso, tenemos que ver como equipar diferentes items
 
 func upgrade():
 	moving_fast=PLAYERDATA.speed
 	limitOres=PLAYERDATA.bagLimit
+	bombItem=PLAYERDATA.bomb
+	bombDrillItem=PLAYERDATA.bombDrill
+	boxItem=PLAYERDATA.box
 
 func pauseMenu():#con esto haremos aparecer el menu y detener el juego
 	if Input.is_action_just_pressed("Menu"):
 		menu.visible=!menu.visible
 		get_tree().paused = !get_tree().paused
 		menu.process_mode = PROCESS_MODE_ALWAYS
+		
+func resetMenu():#con esto termina el juego y podemos reinciiarlo
+	if PLAYERDATA.healtCity<=0:
+		menuEnd.visible=!menuEnd.visible
+		get_tree().paused = !get_tree().paused
+		menuEnd.process_mode = PROCESS_MODE_ALWAYS
 
 func useItem():
-	if Input.is_action_just_pressed("Item"):
-		var bomb = itemBomb.instantiate()
-		get_parent().add_child(bomb)#hazlo para que tenga sus propias propiedades y no herede nada de nosotros
-		bomb.global_position = $bombDeployer.global_position
+	if Input.is_action_just_pressed("Item") and stopItem==true:
+		if bombItem:
+			var item = preload("res://Scene/bomb.tscn")
+			var bomb = item.instantiate()
+			get_parent().add_child(bomb)#hazlo para que tenga sus propias propiedades y no herede nada de nosotros
+			bomb.global_position = $bombDeployer.global_position
+		if bombDrillItem:
+			var item = preload("res://Scene/bombDrill.tscn")
+			var bombDrill = item.instantiate()
+			get_parent().add_child(bombDrill)#hazlo para que tenga sus propias propiedades y no herede nada de nosotros
+			bombDrill.global_position = $bombDeployer.global_position
+		if boxItem:
+			var item = preload("res://Scene/box.tscn")
+			var box = item.instantiate()
+			get_parent().add_child(box)#hazlo para que tenga sus propias propiedades y no herede nada de nosotros
+			box.global_position = $bombDeployer.global_position
 
 
 func activeConsole():
@@ -61,6 +102,7 @@ func activeConsole():
 		console.dataVisible()
 
 func touch(delta):
+	PLAYERDATA.bag=inventory.total
 	if Input.is_action_pressed("Sack") and inventory.total < limitOres:
 		
 		# esto sera un acumulador de los diferentes minerales que encontremos
@@ -144,7 +186,6 @@ func moving(delta):
 
 
 func _on_bag_area_entered(area: Area2D) -> void:#colocar en un grupo de cosas que solo se pueden iteractuar
-
 	if area.name=="Gold" or area.name=="Iron" or area.name=="Gems" or area.name=="Gold2" or area.name=="Iron2" or area.name=="Gems2":#ten siempre en cuenta los nombres de cada nodo para llamarlos
 		
 		nameOre=area.name
@@ -188,3 +229,24 @@ func _on_bag_body_exited(body: Node2D) -> void:
 		oresCloset -= 1
 		if oresCloset <= 0:
 			oresCloset = 0
+
+
+func _on_player_hit_box_area_entered(area: Area2D) -> void:
+	if area.name=="Vault":
+		inventory.total=0#limpiamos el inventario total cuando se vacie para que pueda atrapar massa
+		vault.gold += inventory.gold
+		vault.iron += inventory.iron
+		vault.gems += inventory.gems
+		inventory.gold = 0
+		inventory.iron = 0
+		inventory.gems = 0
+
+
+func _on_player_hit_box_body_entered(body: Node2D) -> void:#aqui nos encargaremos del sistema de aturdir
+	if body.name=="bulletBody":
+		stun=false
+		$stunTimer.start()
+
+func _on_stun_timer_timeout() -> void:
+	stun=true
+	print("termino")
